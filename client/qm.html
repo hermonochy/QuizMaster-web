@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<header>
+	<script>
+	async function getQuizData() {
+ 		 const url = "http://127.0.0.1:8000/randomQuiz";
+		 try {
+  		      const response = await fetch(url);
+                      if (!response.ok) {
+                          throw new Error(`Response status: ${response.status}`);
+                      }
+
+                      const quizInstance = await response.json();
+                      console.log(quizInstance);
+                      } catch (error) {
+                          console.error(error.message);
+                      }
+                  }
+	function startQuiz(event) {
+            //alert('Starting quiz....')
+	    getQuizData();
+        }
+	</script>
+	</header>
+<body>
+
+<h1>QuizMaster Web</h1>
+
+<p>Let the games begin.</p>
+<input id="startQuizBtn" type="button" value="Start Quiz" onclick="startQuiz();" />
+
+</body>
+</html>
