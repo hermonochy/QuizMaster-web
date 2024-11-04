@@ -2,6 +2,9 @@
 <html>
 	<header>
 	<script>
+	//var allAnswersListElem = document.getElementById("allAnswersList");
+	
+	
 	async function getQuizData() {
  		 const url = "http://127.0.0.1:8000/randomQuiz";
                  const quizQuestionElem = document.getElementById("questionTextField");
@@ -52,6 +55,19 @@
 	  
 	  qQs = JSON.stringify(quizQuestions[i]);
 	  elemQuestions.innerHTML= JSON.parse(qQs)["question"];
+
+
+
+
+	  correctAnswerValue = JSON.parse(qQs)["correctAnswer"];
+	  wrongAnswersList = JSON.parse(qQs)["wrongAnswers"];
+	  console.log(correctAnswerValue);
+	  var buttonCorrectAnswer = document.createElement("button");
+	  buttonCorrectAnswer.textContent = correctAnswerValue;
+	  var allAnswersListElem = document.querySelector(".allAnswersList");
+	  allAnswersListElem.appendChild(buttonCorrectAnswer);
+
+
 	}
 
           function printQuizQuestion(text, index, array) {
@@ -72,5 +88,8 @@
 <ul id = "answerTextList"></ul>
 <p id = "titleField"></p>
 <p id = "questionTextField"></p>
+
+<ul class="allAnswersList"></ul>
+
 </body>
 </html>
