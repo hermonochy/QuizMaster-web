@@ -1,95 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<header>
-	<script>
-	//var allAnswersListElem = document.getElementById("allAnswersList");
-	
-	
-	async function getQuizData() {
- 		 const url = "http://127.0.0.1:8000/randomQuiz";
-                 const quizQuestionElem = document.getElementById("questionTextField");
-		 /*
-		 fetch(url)
-			.then((response) => {return response.json();} )
-			.then((data) => {
-				let quizData = data;
-				quizQuestionElem.innerHTML = '$(quizData.title)';
-			})
-			.catch(function(error) {console.log(error);})
-		   
-		 try {
-  		      const response = await fetch(url);
-                      if (!response.ok) {
-                          throw new Error(`Response status: ${response.status}`);
-                      }
-
-                      const quizInstance = await response.json();
-                      //console.log(quizInstance);
-		      return quizInstance;
-                      } catch (error) {
-                          console.error(error.message);
-                      }
-		      */
-		   return await fetch(url).then((response) => {return response.json();
-                  });
-	}
-	function sleep(ms) {
-         return new Promise(resolve => setTimeout(resolve, ms));
+<header>
+  <script>
+    async function getQuizData() {
+      const url = "http://127.0.0.1:8000/randomQuiz";
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
         }
-	async function startQuiz(event) {
-            //alert('Starting quiz....')
-	    quizQuestionsFromServer = await getQuizData();
-	    randomQuiz = quizQuestionsFromServer['randomQuiz'];
-	    console.log(randomQuiz);
-	    quizQuestionsFromServer = JSON.parse(randomQuiz);	
-	    quizQuestions = quizQuestionsFromServer['listOfQuestions'];
-	    quizTitle = quizQuestionsFromServer['title'];
-            const elemTitle = document.getElementById("titleField");
-	    elemTitle.innerHTML = quizTitle;
-            const elemQuestions = document.getElementById("questionTextField");
-	
-	let i = 1;
-	let len = quizQuestions.length;
-	for (; i < len; i++) {
-	  await sleep(500);
-	  
-	  qQs = JSON.stringify(quizQuestions[i]);
-	  elemQuestions.innerHTML= JSON.parse(qQs)["question"];
 
+        const quizInstance = await response.json();
+        console.log(quizInstance);
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    function startQuiz(event) {
+      //alert('Starting quiz....')
+      getQuizData();
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</header>
 
-
-
-	  correctAnswerValue = JSON.parse(qQs)["correctAnswer"];
-	  wrongAnswersList = JSON.parse(qQs)["wrongAnswers"];
-	  console.log(correctAnswerValue);
-	  var buttonCorrectAnswer = document.createElement("button");
-	  buttonCorrectAnswer.textContent = correctAnswerValue;
-	  var allAnswersListElem = document.querySelector(".allAnswersList");
-	  allAnswersListElem.appendChild(buttonCorrectAnswer);
-
-
-	}
-
-          function printQuizQuestion(text, index, array) {
-                const elem = document.getElementById("questionTextField");
-                console.log(JSON.stringify(elem));
-		elem.innerHTML = array[index];
-          }
-        }
-	</script>
-	</header>
 <body>
 
-<h1>QuizMaster Web</h1>
+  <h1>QuizMaster Web</h1>
 
-<p>Let the games begin.</p>
-<input id="startQuizBtn" type="button" value="Start Quiz" onclick="startQuiz();" />
-
-<ul id = "answerTextList"></ul>
-<p id = "titleField"></p>
-<p id = "questionTextField"></p>
-
-<ul class="allAnswersList"></ul>
+  <p>Let the games begin.</p>
+  <input id="startQuizBtn" type="button" value="Start Quiz" onclick="startQuiz();" />
 
 </body>
+
 </html>
