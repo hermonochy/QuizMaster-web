@@ -1,36 +1,436 @@
 <!DOCTYPE html>
 <html>
-<header>
-  <script>
-    async function getQuizData() {
-      const url = "http://127.0.0.1:8000/randomQuiz";
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`Response status: ${response.status}`);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster Web</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="homeSection" class="section active">
+            <div class="home-header">
+                <h1>🎯 QuizMaster</h1>
+                <p class="intro-text">Test Your Knowledge & Master New Topics</p>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <div class="home-features">
+                <h2>Welcome to QuizMaster!</h2>
+                <p style="color: #666; margin-bottom: 20px;">Get ready for an interactive quiz experience with:</p>
+                <ul class="feature-list">
+                    <li>Random quiz questions tailored for you</li>
+                    <li>Instant feedback on your answers</li>
+                    <li>Detailed score breakdown</li>
+                    <li>Review of incorrect answers</li>
+                    <li>Progress tracking throughout the quiz</li>
+                </ul>
+            </div>
+
+            <button id="startQuizBtn">Start Quiz Now</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizSection" class="section">
+            <div class="quiz-header">
+                <div id="titleField"></div>
+                <div class="score-display">
+                    Question <span id="currentQuestion">1</span> of <span id="totalQuestions">0</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div id="questionTextField"></div>
+
+            <ul class="allAnswersList" id="answersList"></ul>
+        </div>
+
+        <!-- Quick Results Screen -->
+        <div id="quickResultsSection" class="section">
+            <div class="results-header">
+                <h2>Quiz Complete! 🎉</h2>
+                <div class="score-percentage" id="quickScorePercentage">0%</div>
+                <div class="final-score" id="quickFinalScore">0/0</div>
+                <div class="score-message" id="quickScoreMessage"></div>
+            </div>
+
+            <div class="button-group">
+                <button id="viewResultsBtn">View Detailed Results</button>
+                <button id="restartBtn">Restart Quiz</button>
+            </div>
+        </div>
+
+        <!-- Detailed Results Screen -->
+        <div id="resultsSection" class="section">
+            <div class="results-header">
+                <h2>Your Quiz Results 📊</h2>
+                <div class="score-percentage" id="scorePercentage">0%</div>
+                <div class="final-score" id="finalScore">0/0</div>
+                <div class="score-message" id="scoreMessage"></div>
+            </div>
+
+            <div class="performance-stats">
+                <div class="stat-box correct">
+                    <div class="stat-label">Correct Answers</div>
+                    <div class="stat-value" id="correctCount">0</div>
+                </div>
+                <div class="stat-box incorrect">
+                    <div class="stat-label">Incorrect Answers</div>
+                    <div class="stat-value" id="incorrectCount">0</div>
+                </div>
+            </div>
+
+            <div class="review-section" id="reviewSection" style="display: none;">
+                <div class="review-title">Questions You Got Wrong</div>
+                <div id="wrongAnswersReview"></div>
+            </div>
+
+            <div id="noWrongAnswers" style="text-align: center; padding: 30px; background: #e8f5e9; border-radius: 8px; display: none;">
+                <div style="font-size: 48px; margin-bottom: 10px;">🏆</div>
+                <div style="font-size: 18px; color: #2e7d32; font-weight: bold;">Perfect Score!</div>
+                <div style="color: #666; margin-top: 10px;">You answered all questions correctly!</div>
+            </div>
+
+            <div class="button-row">
+                <button id="homeBtn">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State management
+        let quizData = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let selectedAnswer = null;
+        let answered = false;
+        let userAnswers = []; // Track all user answers
+
+        // DOM Elements
+        const startBtn = document.getElementById('startQuizBtn');
+        const viewResultsBtn = document.getElementById('viewResultsBtn');
+        const restartBtn = document.getElementById('restartBtn');
+        const homeBtn = document.getElementById('homeBtn');
+
+        const homeSection = document.getElementById('homeSection');
+        const quizSection = document.getElementById('quizSection');
+        const quickResultsSection = document.getElementById('quickResultsSection');
+        const resultsSection = document.getElementById('resultsSection');
+
+        const titleField = document.getElementById('titleField');
+        const questionField = document.getElementById('questionTextField');
+        const answersList = document.getElementById('answersList');
+        const currentQuestionSpan = document.getElementById('currentQuestion');
+        const totalQuestionsSpan = document.getElementById('totalQuestions');
+        const progressFill = document.getElementById('progressFill');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Fetch quiz data from server
+        async function getQuizData() {
+            try {
+                const url = "http://127.0.0.1:8000/randomQuiz";
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching quiz data:', error);
+                showError('Failed to load quiz. Please check your connection and try again.');
+                throw error;
+            }
         }
 
-        const quizInstance = await response.json();
-        console.log(quizInstance);
-      } catch (error) {
-        console.error(error.message);
-      }
-    }
-    function startQuiz(event) {
-      //alert('Starting quiz....')
-      getQuizData();
-    }
-  </script>
-  <link rel="stylesheet" href="style.css">
-</header>
+        // Show error message
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+        }
 
-<body>
+        // Hide error message
+        function hideError() {
+            errorMessage.style.display = 'none';
+        }
 
-  <h1>QuizMaster Web</h1>
+        // Show specific section
+        function showSection(sectionName) {
+            homeSection.classList.remove('active');
+            quizSection.classList.remove('active');
+            quickResultsSection.classList.remove('active');
+            resultsSection.classList.remove('active');
 
-  <p>Let the games begin.</p>
-  <input id="startQuizBtn" type="button" value="Start Quiz" onclick="startQuiz();" />
+            switch (sectionName) {
+                case 'home':
+                    homeSection.classList.add('active');
+                    break;
+                case 'quiz':
+                    quizSection.classList.add('active');
+                    break;
+                case 'quickResults':
+                    quickResultsSection.classList.add('active');
+                    break;
+                case 'results':
+                    resultsSection.classList.add('active');
+                    break;
+            }
+        }
 
+        // Start the quiz
+        async function startQuiz() {
+            try {
+                hideError();
+                startBtn.textContent = 'Loading...';
+                startBtn.disabled = true;
+
+                const quizResponse = await getQuizData();
+                
+                // Parse the quiz data
+                const randomQuiz = quizResponse['randomQuiz'];
+                const parsedData = JSON.parse(randomQuiz);
+                quizData = parsedData['listOfQuestions'];
+                const quizTitle = parsedData['title'];
+
+                if (!quizData || quizData.length === 0) {
+                    throw new Error('No questions found in quiz');
+                }
+
+                // Reset game state
+                currentQuestionIndex = 0;
+                score = 0;
+                selectedAnswer = null;
+                answered = false;
+                userAnswers = [];
+
+                // Update UI
+                titleField.textContent = quizTitle;
+                totalQuestionsSpan.textContent = quizData.length;
+
+                // Switch to quiz section
+                showSection('quiz');
+                displayQuestion();
+
+                startBtn.textContent = 'Start Quiz Now';
+                startBtn.disabled = false;
+            } catch (error) {
+                console.error('Error starting quiz:', error);
+                startBtn.textContent = 'Start Quiz Now';
+                startBtn.disabled = false;
+            }
+        }
+
+        // Display current question and answers
+        function displayQuestion() {
+            const question = quizData[currentQuestionIndex];
+            
+            // Update question text
+            questionField.textContent = question['question'];
+
+            // Create answer list
+            const answers = [
+                question['correctAnswer'],
+                ...question['wrongAnswers']
+            ];
+
+            // Shuffle answers
+            const shuffledAnswers = shuffleArray(answers);
+
+            // Clear previous answers
+            answersList.innerHTML = '';
+
+            // Create answer buttons
+            shuffledAnswers.forEach((answer, index) => {
+                const li = document.createElement('li');
+                const button = document.createElement('button');
+                button.className = 'answer-button';
+                button.textContent = answer;
+                button.dataset.answer = answer;
+                button.onclick = () => selectAnswer(answer, button);
+                li.appendChild(button);
+                answersList.appendChild(li);
+            });
+
+            // Update progress
+            currentQuestionSpan.textContent = currentQuestionIndex + 1;
+            const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
+            progressFill.style.width = progress + '%';
+
+            // Reset state for new question
+            selectedAnswer = null;
+            answered = false;
+        }
+
+        // Handle answer selection
+        function selectAnswer(answer, buttonElement) {
+            if (answered) return;
+
+            answered = true;
+            const question = quizData[currentQuestionIndex];
+            const correctAnswer = question['correctAnswer'];
+            const isCorrect = answer === correctAnswer;
+
+            // Track this answer
+            userAnswers.push({
+                question: question['question'],
+                correctAnswer: correctAnswer,
+                userAnswer: answer,
+                isCorrect: isCorrect
+            });
+
+            // Update score
+            if (isCorrect) {
+                score++;
+            }
+
+            // Disable all buttons and show correct/incorrect feedback
+            document.querySelectorAll('.answer-button').forEach(btn => {
+                btn.disabled = true;
+
+                if (btn.dataset.answer === correctAnswer) {
+                    btn.classList.add('correct');
+                } else if (btn.dataset.answer === answer && !isCorrect) {
+                    btn.classList.add('incorrect');
+                }
+            });
+
+            // Move to next question or show results
+            setTimeout(() => {
+                currentQuestionIndex++;
+
+                if (currentQuestionIndex < quizData.length) {
+                    displayQuestion();
+                } else {
+                    showQuickResults();
+                }
+            }, 2000);
+        }
+
+        // Display quick results before detailed view
+        function showQuickResults() {
+            const percentage = Math.round((score / quizData.length) * 100);
+            document.getElementById('quickFinalScore').textContent = `${score}/${quizData.length}`;
+            document.getElementById('quickScorePercentage').textContent = `${percentage}%`;
+
+            // Generate message based on performance
+            let message = '';
+            if (percentage === 100) {
+                message = 'Perfect! You\'re a quiz master! 🏆';
+            } else if (percentage >= 80) {
+                message = 'Excellent work! You really know your stuff! 🌟';
+            } else if (percentage >= 60) {
+                message = 'Good job! Keep learning and you\'ll improve! 📚';
+            } else {
+                message = 'Keep practicing! Every attempt makes you smarter! 💪';
+            }
+
+            document.getElementById('quickScoreMessage').textContent = message;
+            showSection('quickResults');
+        }
+
+        // Display detailed results with review
+        function showResults() {
+            const percentage = Math.round((score / quizData.length) * 100);
+            const incorrectCount = quizData.length - score;
+
+            document.getElementById('finalScore').textContent = `${score}/${quizData.length}`;
+            document.getElementById('scorePercentage').textContent = `${percentage}%`;
+            document.getElementById('correctCount').textContent = score;
+            document.getElementById('incorrectCount').textContent = incorrectCount;
+
+            // Generate message based on performance
+            let message = '';
+            if (percentage === 100) {
+                message = 'Perfect! You\'re a quiz master! 🏆';
+            } else if (percentage >= 80) {
+                message = 'Excellent work! You really know your stuff! 🌟';
+            } else if (percentage >= 60) {
+                message = 'Good job! Keep learning and you\'ll improve! 📚';
+            } else {
+                message = 'Keep practicing! Every attempt makes you smarter! 💪';
+            }
+
+            document.getElementById('scoreMessage').textContent = `${message} (${percentage}% correct)`;
+
+            // Show wrong answers review
+            const wrongAnswers = userAnswers.filter(answer => !answer.isCorrect);
+
+            if (wrongAnswers.length > 0) {
+                document.getElementById('reviewSection').style.display = 'block';
+                document.getElementById('noWrongAnswers').style.display = 'none';
+                displayWrongAnswersReview(wrongAnswers);
+            } else {
+                document.getElementById('reviewSection').style.display = 'none';
+                document.getElementById('noWrongAnswers').style.display = 'block';
+            }
+
+            showSection('results');
+        }
+
+        // Display review of wrong answers
+        function displayWrongAnswersReview(wrongAnswers) {
+            const reviewContainer = document.getElementById('wrongAnswersReview');
+            reviewContainer.innerHTML = '';
+
+            wrongAnswers.forEach((answer, index) => {
+                const reviewDiv = document.createElement('div');
+                reviewDiv.className = 'question-review';
+
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'review-question';
+                questionDiv.innerHTML = `<span style="color: #f44336;">✗</span> Question ${index + 1}: ${answer.question}`;
+
+                const answersDiv = document.createElement('div');
+                answersDiv.className = 'review-answers';
+
+                const yourAnswerDiv = document.createElement('div');
+                yourAnswerDiv.className = 'review-answer your-answer';
+                yourAnswerDiv.innerHTML = `
+                    <div class="review-answer-label">Your Answer:</div>
+                    <div>${answer.userAnswer}</div>
+                `;
+
+                const correctAnswerDiv = document.createElement('div');
+                correctAnswerDiv.className = 'review-answer correct-answer';
+                correctAnswerDiv.innerHTML = `
+                    <div class="review-answer-label">Correct Answer:</div>
+                    <div>${answer.correctAnswer}</div>
+                `;
+
+                answersDiv.appendChild(yourAnswerDiv);
+                answersDiv.appendChild(correctAnswerDiv);
+
+                reviewDiv.appendChild(questionDiv);
+                reviewDiv.appendChild(answersDiv);
+
+                reviewContainer.appendChild(reviewDiv);
+            });
+        }
+
+        // Shuffle array (Fisher-Yates)
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Event listeners
+        startBtn.addEventListener('click', startQuiz);
+        viewResultsBtn.addEventListener('click', showResults);
+        restartBtn.addEventListener('click', startQuiz);
+        homeBtn.addEventListener('click', () => {
+            showSection('home');
+            hideError();
+        });
+    </script>
 </body>
 
 </html>
