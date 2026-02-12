@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="../data/music/music1.ogg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="music-control">
+        <button id="musicToggleBtn" class="music-btn" title="Toggle Music">
+            🔊
+        </button>
+    </div>
+
     <div class="container">
-        <!-- Home Screen -->
         <div id="homeSection" class="section active">
             <div class="home-header">
                 <h1>🎯 QuizMaster</h1>
@@ -22,6 +32,7 @@
                 <p style="color: #666; margin-bottom: 20px;">Get ready for an interactive quiz experience with:</p>
                 <ul class="feature-list">
                     <li>Random quiz questions tailored for you</li>
+                    <li>Search for specific quiz topics</li>
                     <li>Instant feedback on your answers</li>
                     <li>Detailed score breakdown</li>
                     <li>Review of incorrect answers</li>
@@ -29,10 +40,23 @@
                 </ul>
             </div>
 
-            <button id="startQuizBtn">Start Quiz Now</button>
+            <div class="search-section">
+                <h2>Search for a Quiz</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Enter quiz topic (e.g., 'Biology', 'Math', 'History')..." />
+                    <button id="searchBtn">Search</button>
+                </div>
+                <div id="searchResults" style="display: none;"></div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div style="text-align: center;">
+                <p style="color: #666; margin-bottom: 15px;">Or start with a random quiz</p>
+                <button id="startQuizBtn">Start Random Quiz</button>
+            </div>
         </div>
 
-        <!-- Quiz Screen -->
         <div id="quizSection" class="section">
             <div class="quiz-header">
                 <div id="titleField"></div>
@@ -49,7 +73,6 @@
             <ul class="allAnswersList" id="answersList"></ul>
         </div>
 
-        <!-- Quick Results Screen -->
         <div id="quickResultsSection" class="section">
             <div class="results-header">
                 <h2>Quiz Complete! 🎉</h2>
@@ -64,7 +87,6 @@
             </div>
         </div>
 
-        <!-- Detailed Results Screen -->
         <div id="resultsSection" class="section">
             <div class="results-header">
                 <h2>Your Quiz Results 📊</h2>
@@ -102,16 +124,50 @@
     </div>
 
     <script>
-        // State management
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const musicToggleBtn = document.getElementById('musicToggleBtn');
+        let isMusicPlaying = true;
+
+        backgroundMusic.volume = 0.3;
+
+        musicToggleBtn.addEventListener('click', () => {
+            if (isMusicPlaying) {
+                backgroundMusic.pause();
+                musicToggleBtn.textContent = '🔇';
+                musicToggleBtn.title = 'Unmute Music';
+                isMusicPlaying = false;
+            } else {
+                backgroundMusic.play().catch(error => {
+                    console.log('Autoplay was prevented:', error);
+                });
+                musicToggleBtn.textContent = '🔊';
+                musicToggleBtn.title = 'Mute Music';
+                isMusicPlaying = true;
+            }
+        });
+
+        backgroundMusic.play().catch(error => {
+            console.log('Autoplay was prevented, user must click to start music');
+            isMusicPlaying = false;
+            musicToggleBtn.textContent = '🔇';
+        });
+
+        backgroundMusic.addEventListener('ended', () => {
+            backgroundMusic.currentTime = 0;
+            backgroundMusic.play();
+        });
+
         let quizData = [];
         let currentQuestionIndex = 0;
         let score = 0;
         let selectedAnswer = null;
         let answered = false;
-        let userAnswers = []; // Track all user answers
+        let userAnswers = [];
+        let currentQuizTitle = '';
 
-        // DOM Elements
         const startBtn = document.getElementById('startQuizBtn');
+        const searchBtn = document.getElementById('searchBtn');
+        const searchInput = document.getElementById('searchInput');
         const viewResultsBtn = document.getElementById('viewResultsBtn');
         const restartBtn = document.getElementById('restartBtn');
         const homeBtn = document.getElementById('homeBtn');
@@ -128,8 +184,8 @@
         const totalQuestionsSpan = document.getElementById('totalQuestions');
         const progressFill = document.getElementById('progressFill');
         const errorMessage = document.getElementById('errorMessage');
+        const searchResults = document.getElementById('searchResults');
 
-        // Fetch quiz data from server
         async function getQuizData() {
             try {
                 const url = "http://127.0.0.1:8000/randomQuiz";
@@ -148,18 +204,149 @@
             }
         }
 
-        // Show error message
+        async function getQuizByPath(filePath) {
+            try {
+                const url = `http://127.0.0.1:8000/getQuizByPath?path=${encodeURIComponent(filePath)}`;
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                if (!data.success) {
+                    throw new Error(data.message || 'Failed to load quiz');
+                }
+                return data;
+            } catch (error) {
+                console.error('Error fetching quiz by path:', error);
+                showError('Failed to load selected quiz. Please try again.');
+                throw error;
+            }
+        }
+
+        async function searchQuizzes() {
+            const query = searchInput.value.trim();
+            
+            if (!query) {
+                showError('Please enter a search term');
+                return;
+            }
+
+            searchBtn.textContent = 'Searching...';
+            searchBtn.disabled = true;
+            hideError();
+
+            try {
+                const url = `http://127.0.0.1:8000/searchQuiz?query=${encodeURIComponent(query)}`;
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                displaySearchResults(data);
+            } catch (error) {
+                console.error('Error searching quizzes:', error);
+                showError('Failed to search quizzes. Please check your connection and try again.');
+            } finally {
+                searchBtn.textContent = 'Search';
+                searchBtn.disabled = false;
+            }
+        }
+
+        function displaySearchResults(data) {
+            const resultsContainer = searchResults;
+            resultsContainer.innerHTML = '';
+
+            if (!data.success || data.results.length === 0) {
+                resultsContainer.innerHTML = `<div class="search-no-results">No quizzes found for "${searchInput.value}". Try a different search term.</div>`;
+                resultsContainer.style.display = 'block';
+                return;
+            }
+
+            resultsContainer.innerHTML = `<div class="search-header">${data.message}</div>`;
+
+            const resultsList = document.createElement('div');
+            resultsList.className = 'search-results-list';
+
+            data.results.forEach((result, index) => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-result-item';
+                
+                const title = document.createElement('h3');
+                title.className = 'search-result-title';
+                title.textContent = result.title;
+                
+                const questionCount = document.createElement('p');
+                questionCount.className = 'search-result-info';
+                questionCount.textContent = `${result.quiz.listOfQuestions ? result.quiz.listOfQuestions.length : 0} questions`;
+                
+                const selectBtn = document.createElement('button');
+                selectBtn.className = 'search-result-btn';
+                selectBtn.textContent = 'Start This Quiz';
+                selectBtn.onclick = () => loadSelectedQuiz(result);
+                
+                resultItem.appendChild(title);
+                resultItem.appendChild(questionCount);
+                resultItem.appendChild(selectBtn);
+                resultsList.appendChild(resultItem);
+            });
+
+            resultsContainer.appendChild(resultsList);
+            resultsContainer.style.display = 'block';
+        }
+
+        async function loadSelectedQuiz(quizResult) {
+            try {
+                searchBtn.textContent = 'Loading...';
+                searchBtn.disabled = true;
+
+                const quizData = quizResult.quiz;
+                const quizTitle = quizResult.title;
+
+                if (!quizData || !quizData.listOfQuestions || quizData.listOfQuestions.length === 0) {
+                    throw new Error('Invalid quiz data');
+                }
+
+                currentQuestionIndex = 0;
+                score = 0;
+                selectedAnswer = null;
+                answered = false;
+                userAnswers = [];
+                currentQuizTitle = quizTitle;
+
+                quizData_global = quizData.listOfQuestions;
+
+                titleField.textContent = quizTitle;
+                totalQuestionsSpan.textContent = quizData_global.length;
+
+                showSection('quiz');
+                displayQuestion();
+                ensureMusicPlaying();
+
+                searchBtn.textContent = 'Search';
+                searchBtn.disabled = false;
+            } catch (error) {
+                console.error('Error loading selected quiz:', error);
+                showError('Failed to load selected quiz. Please try again.');
+                searchBtn.textContent = 'Search';
+                searchBtn.disabled = false;
+            }
+        }
+
+        let quizData_global = [];
+
         function showError(message) {
             errorMessage.textContent = message;
             errorMessage.style.display = 'block';
         }
 
-        // Hide error message
         function hideError() {
             errorMessage.style.display = 'none';
         }
 
-        // Show specific section
         function showSection(sectionName) {
             homeSection.classList.remove('active');
             quizSection.classList.remove('active');
@@ -182,7 +369,14 @@
             }
         }
 
-        // Start the quiz
+        function ensureMusicPlaying() {
+            if (isMusicPlaying && backgroundMusic.paused) {
+                backgroundMusic.play().catch(error => {
+                    console.log('Could not resume music:', error);
+                });
+            }
+        }
+
         async function startQuiz() {
             try {
                 hideError();
@@ -191,60 +385,52 @@
 
                 const quizResponse = await getQuizData();
                 
-                // Parse the quiz data
                 const randomQuiz = quizResponse['randomQuiz'];
                 const parsedData = JSON.parse(randomQuiz);
-                quizData = parsedData['listOfQuestions'];
+                quizData_global = parsedData['listOfQuestions'];
                 const quizTitle = parsedData['title'];
+                currentQuizTitle = quizTitle;
 
-                if (!quizData || quizData.length === 0) {
+                if (!quizData_global || quizData_global.length === 0) {
                     throw new Error('No questions found in quiz');
                 }
 
-                // Reset game state
                 currentQuestionIndex = 0;
                 score = 0;
                 selectedAnswer = null;
                 answered = false;
                 userAnswers = [];
 
-                // Update UI
                 titleField.textContent = quizTitle;
-                totalQuestionsSpan.textContent = quizData.length;
+                totalQuestionsSpan.textContent = quizData_global.length;
 
-                // Switch to quiz section
                 showSection('quiz');
                 displayQuestion();
+                ensureMusicPlaying();
 
-                startBtn.textContent = 'Start Quiz Now';
+                startBtn.textContent = 'Start Random Quiz';
                 startBtn.disabled = false;
             } catch (error) {
                 console.error('Error starting quiz:', error);
-                startBtn.textContent = 'Start Quiz Now';
+                startBtn.textContent = 'Start Random Quiz';
                 startBtn.disabled = false;
             }
         }
 
-        // Display current question and answers
         function displayQuestion() {
-            const question = quizData[currentQuestionIndex];
+            const question = quizData_global[currentQuestionIndex];
             
-            // Update question text
             questionField.textContent = question['question'];
 
-            // Create answer list
             const answers = [
                 question['correctAnswer'],
                 ...question['wrongAnswers']
             ];
 
-            // Shuffle answers
             const shuffledAnswers = shuffleArray(answers);
 
-            // Clear previous answers
             answersList.innerHTML = '';
 
-            // Create answer buttons
             shuffledAnswers.forEach((answer, index) => {
                 const li = document.createElement('li');
                 const button = document.createElement('button');
@@ -256,26 +442,22 @@
                 answersList.appendChild(li);
             });
 
-            // Update progress
             currentQuestionSpan.textContent = currentQuestionIndex + 1;
-            const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
+            const progress = ((currentQuestionIndex + 1) / quizData_global.length) * 100;
             progressFill.style.width = progress + '%';
 
-            // Reset state for new question
             selectedAnswer = null;
             answered = false;
         }
 
-        // Handle answer selection
         function selectAnswer(answer, buttonElement) {
             if (answered) return;
 
             answered = true;
-            const question = quizData[currentQuestionIndex];
+            const question = quizData_global[currentQuestionIndex];
             const correctAnswer = question['correctAnswer'];
             const isCorrect = answer === correctAnswer;
 
-            // Track this answer
             userAnswers.push({
                 question: question['question'],
                 correctAnswer: correctAnswer,
@@ -283,12 +465,10 @@
                 isCorrect: isCorrect
             });
 
-            // Update score
             if (isCorrect) {
                 score++;
             }
 
-            // Disable all buttons and show correct/incorrect feedback
             document.querySelectorAll('.answer-button').forEach(btn => {
                 btn.disabled = true;
 
@@ -299,25 +479,24 @@
                 }
             });
 
-            // Move to next question or show results
             setTimeout(() => {
                 currentQuestionIndex++;
 
-                if (currentQuestionIndex < quizData.length) {
+                if (currentQuestionIndex < quizData_global.length) {
                     displayQuestion();
+                    ensureMusicPlaying();
                 } else {
                     showQuickResults();
+                    ensureMusicPlaying();
                 }
             }, 2000);
         }
 
-        // Display quick results before detailed view
         function showQuickResults() {
-            const percentage = Math.round((score / quizData.length) * 100);
-            document.getElementById('quickFinalScore').textContent = `${score}/${quizData.length}`;
+            const percentage = Math.round((score / quizData_global.length) * 100);
+            document.getElementById('quickFinalScore').textContent = `${score}/${quizData_global.length}`;
             document.getElementById('quickScorePercentage').textContent = `${percentage}%`;
 
-            // Generate message based on performance
             let message = '';
             if (percentage === 100) {
                 message = 'Perfect! You\'re a quiz master! 🏆';
@@ -333,17 +512,15 @@
             showSection('quickResults');
         }
 
-        // Display detailed results with review
         function showResults() {
-            const percentage = Math.round((score / quizData.length) * 100);
-            const incorrectCount = quizData.length - score;
+            const percentage = Math.round((score / quizData_global.length) * 100);
+            const incorrectCount = quizData_global.length - score;
 
-            document.getElementById('finalScore').textContent = `${score}/${quizData.length}`;
+            document.getElementById('finalScore').textContent = `${score}/${quizData_global.length}`;
             document.getElementById('scorePercentage').textContent = `${percentage}%`;
             document.getElementById('correctCount').textContent = score;
             document.getElementById('incorrectCount').textContent = incorrectCount;
 
-            // Generate message based on performance
             let message = '';
             if (percentage === 100) {
                 message = 'Perfect! You\'re a quiz master! 🏆';
@@ -357,7 +534,6 @@
 
             document.getElementById('scoreMessage').textContent = `${message} (${percentage}% correct)`;
 
-            // Show wrong answers review
             const wrongAnswers = userAnswers.filter(answer => !answer.isCorrect);
 
             if (wrongAnswers.length > 0) {
@@ -372,7 +548,6 @@
             showSection('results');
         }
 
-        // Display review of wrong answers
         function displayWrongAnswersReview(wrongAnswers) {
             const reviewContainer = document.getElementById('wrongAnswersReview');
             reviewContainer.innerHTML = '';
@@ -412,7 +587,6 @@
             });
         }
 
-        // Shuffle array (Fisher-Yates)
         function shuffleArray(array) {
             const shuffled = [...array];
             for (let i = shuffled.length - 1; i > 0; i--) {
@@ -422,15 +596,21 @@
             return shuffled;
         }
 
-        // Event listeners
         startBtn.addEventListener('click', startQuiz);
+        searchBtn.addEventListener('click', searchQuizzes);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchQuizzes();
+            }
+        });
         viewResultsBtn.addEventListener('click', showResults);
         restartBtn.addEventListener('click', startQuiz);
         homeBtn.addEventListener('click', () => {
             showSection('home');
             hideError();
+            searchResults.style.display = 'none';
+            searchInput.value = '';
         });
     </script>
 </body>
-
 </html>

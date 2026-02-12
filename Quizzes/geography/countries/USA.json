@@ -1,0 +1,234 @@
+{
+  "title": "The USA",
+  "listOfQuestions": [
+    {
+      "question": "What is the capital of the United States?",
+      "correctAnswer": "Washington, D.C.",
+      "wrongAnswers": ["New York City", "Los Angeles", "Chicago"],
+      "timeout": 15
+    },
+    {
+      "question": "Which amendment abolished slavery?",
+      "correctAnswer": "13th Amendment",
+      "wrongAnswers": ["15th Amendment", "19th Amendment", "21st Amendment"],
+      "timeout": 15
+    },
+    {
+      "question": "Who was the first President of the United States?",
+      "correctAnswer": "George Washington",
+      "wrongAnswers": ["Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the largest state in the USA by area?",
+      "correctAnswer": "Alaska",
+      "wrongAnswers": ["Texas", "California", "Montana"],
+      "timeout": 15
+    },
+    {
+      "question": "In which year did the United States declare independence?",
+      "correctAnswer": "1776",
+      "wrongAnswers": ["1781", "1791", "1765"],
+      "timeout": 15
+    },
+    {
+      "question": "What ocean is on the West Coast of the United States?",
+      "correctAnswer": "Pacific Ocean",
+      "wrongAnswers": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+      "timeout": 15
+    },
+    {
+      "question": "Which U.S. state is known as the 'Sunshine State'?",
+      "correctAnswer": "Florida",
+      "wrongAnswers": ["California", "Texas", "Hawaii"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the national anthem of the United States?",
+      "correctAnswer": "The Star-Spangled Banner",
+      "wrongAnswers": ["America the Beautiful", "God Bless America", "This Land Is Your Land"],
+      "timeout": 15
+    },
+    {
+      "question": "Who wrote the Declaration of Independence?",
+      "correctAnswer": "Thomas Jefferson",
+      "wrongAnswers": ["George Washington", "Benjamin Franklin", "John Adams"],
+      "timeout": 15
+    },
+    {
+      "question": "Which U.S. state was the last to join the Union?",
+      "correctAnswer": "Hawaii",
+      "wrongAnswers": ["Alaska", "Arizona", "New Mexico"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the smallest U.S. state by area?",
+      "correctAnswer": "Rhode Island",
+      "wrongAnswers": ["Delaware", "Connecticut", "New Jersey"],
+      "timeout": 15
+    },
+    {
+      "question": "Which U.S. city is known as the 'Windy City'?",
+      "correctAnswer": "Chicago",
+      "wrongAnswers": ["New York City", "Los Angeles", "San Francisco"],
+      "timeout": 15
+    },
+    {
+      "question": "What year did the U.S. land on the Moon?",
+      "correctAnswer": "1969",
+      "wrongAnswers": ["1971", "1965", "1973"],
+      "timeout": 15
+    },
+    {
+      "question": "Who was President during the Great Depression?",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "wrongAnswers": ["Herbert Hoover", "Harry S. Truman", "Dwight D. Eisenhower"],
+      "timeout": 15
+    },
+    {
+      "question": "Which document serves as the supreme law of the land?",
+      "correctAnswer": "U.S. Constitution",
+      "wrongAnswers": ["Bill of Rights", "Declaration of Independence", "Articles of Confederation"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the national legislature of the United States?",
+      "correctAnswer": "Congress",
+      "wrongAnswers": ["Parliament", "Senate", "House of Commons"],
+      "timeout": 15
+    },
+    {
+      "question": "Which landmark decision established judicial review?",
+      "correctAnswer": "Marbury v. Madison",
+      "wrongAnswers": ["Brown v. Board of Education", "Roe v. Wade", "Miranda v. Arizona"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the largest city in the United States?",
+      "correctAnswer": "New York City",
+      "wrongAnswers": ["Los Angeles", "Chicago", "Houston"],
+      "timeout": 15
+    },
+    {
+      "question": "Which state is known for its potatoes?",
+      "correctAnswer": "Idaho",
+      "wrongAnswers": ["Maine", "Washington", "Oregon"],
+      "timeout": 15
+    },
+    {
+      "question": "What year was the Constitution written?",
+      "correctAnswer": "1787",
+      "wrongAnswers": ["1776", "1791", "1789"],
+      "timeout": 15
+    },
+    {
+      "question": "Who was known as the 'Father of the Constitution'?",
+      "correctAnswer": "James Madison",
+      "wrongAnswers": ["Alexander Hamilton", "George Washington", "Thomas Jefferson"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the official currency of the United States?",
+      "correctAnswer": "U.S. Dollar",
+      "wrongAnswers": ["Euro", "Pound Sterling", "Yen"],
+      "timeout": 15
+    },
+    {
+      "question": "Which U.S. state is famous for its wine production?",
+      "correctAnswer": "California",
+      "wrongAnswers": ["Oregon", "Washington", "Texas"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the national bird of the United States?",
+      "correctAnswer": "Bald Eagle",
+      "wrongAnswers": ["Peregrine Falcon", "Red-tailed Hawk", "American Robin"],
+      "timeout": 15
+    },
+    {
+      "question": "Which U.S. president issued the Emancipation Proclamation?",
+      "correctAnswer": "Abraham Lincoln",
+      "wrongAnswers": ["George Washington", "Thomas Jefferson", "Ulysses S. Grant"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the tallest mountain in the United States?",
+      "correctAnswer": "Denali (Mount McKinley)",
+      "wrongAnswers": ["Mount Rainier", "Mount Elbert", "Mount Whitney"],
+      "timeout": 15
+    },
+    {
+      "question": "In which city is the Statue of Liberty located?",
+      "correctAnswer": "New York City",
+      "wrongAnswers": ["Los Angeles", "Boston", "Miami"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the main language spoken in the United States?",
+      "correctAnswer": "English",
+      "wrongAnswers": ["Spanish", "French", "Chinese"],
+      "timeout": 15
+    },
+    {
+      "question": "Which war was fought to end slavery in the United States?",
+      "correctAnswer": "Civil War",
+      "wrongAnswers": ["World War I", "World War II", "Revolutionary War"],
+      "timeout": 15
+    },
+    {
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "correctAnswer": "Amelia Earhart",
+      "wrongAnswers": ["Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the first ten amendments to the Constitution?",
+      "correctAnswer": "Bill of Rights",
+      "wrongAnswers": ["Declaration of Independence", "Articles of Confederation", "Emancipation Proclamation"],
+      "timeout": 15
+    },
+    {
+      "question": "Who was the only U.S. president to serve more than two terms?",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "wrongAnswers": ["Theodore Roosevelt", "Woodrow Wilson", "Harry S. Truman"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary purpose of the U.S. Census?",
+      "correctAnswer": "To count the population",
+      "wrongAnswers": ["To collect taxes", "To register voters", "To elect officials"],
+      "timeout": 15
+    },
+    {
+      "question": "Which U.S. territory is located in the Caribbean?",
+      "correctAnswer": "Puerto Rico",
+      "wrongAnswers": ["Guam", "American Samoa", "U.S. Virgin Islands"],
+      "timeout": 15
+    },
+    {
+      "question": "What famous speech began with 'I have a dream'?",
+      "correctAnswer": "Martin Luther King Jr.'s speech",
+      "wrongAnswers": ["Abraham Lincoln's Gettysburg Address", "John F. Kennedy's inaugural address", "Franklin D. Roosevelt's Day of Infamy speech"],
+      "timeout": 15
+    },
+    {
+      "question": "Which U.S. city is home to the Golden Gate Bridge?",
+      "correctAnswer": "San Francisco",
+      "wrongAnswers": ["Los Angeles", "Seattle", "New York City"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the population of the United States approximately as of 2023?",
+      "correctAnswer": "331 million",
+      "wrongAnswers": ["250 million", "400 million", "500 million"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the longest river in the United States?",
+      "correctAnswer": "Missouri River",
+      "wrongAnswers": ["Mississippi River", "Yukon River", "Colorado River"],
+      "timeout": 15
+    }
+  ],
+  "time given": "600"
+}

@@ -1,0 +1,282 @@
+{
+  "title": "Body Systems",
+  "listOfQuestions": [
+    {
+      "question": "What is the primary function of the circulatory system?",
+      "correctAnswer": "To transport blood and nutrients throughout the body",
+      "wrongAnswers": ["To break down food", "To provide structure", "To filter waste"],
+      "timeout": 15
+    },
+    {
+      "question": "Which organ is primarily responsible for filtering blood?",
+      "correctAnswer": "Kidneys",
+      "wrongAnswers": ["Liver", "Heart", "Lungs"],
+      "timeout": 15
+    },
+    {
+      "question": "What system is responsible for producing hormones?",
+      "correctAnswer": "Endocrine system",
+      "wrongAnswers": ["Nervous system", "Circulatory system", "Respiratory system"],
+      "timeout": 15
+    },
+    {
+      "question": "Which part of the nervous system is responsible for voluntary movements?",
+      "correctAnswer": "Somatic nervous system",
+      "wrongAnswers": ["Central nervous system", "Autonomic nervous system", "Peripheral nervous system"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the main function of the respiratory system?",
+      "correctAnswer": "To facilitate gas exchange",
+      "wrongAnswers": ["To digest food", "To circulate blood", "To support movement"],
+      "timeout": 15
+    },
+    {
+      "question": "Which system helps in the production of blood cells?",
+      "correctAnswer": "Skeletal system",
+      "wrongAnswers": ["Muscular system", "Nervous system", "Integumentary system"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the functional unit of the kidney?",
+      "correctAnswer": "Nephron",
+      "wrongAnswers": ["Alveolus", "Neuron", "Hepatocyte"],
+      "timeout": 15
+    },
+    {
+      "question": "What organ is part of both the digestive and endocrine systems?",
+      "correctAnswer": "Pancreas",
+      "wrongAnswers": ["Liver", "Stomach", "Spleen"],
+      "timeout": 15
+    },
+    {
+      "question": "Which body system includes the skin?",
+      "correctAnswer": "Integumentary system",
+      "wrongAnswers": ["Muscular system", "Nervous system", "Skeletal system"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary function of the digestive system?",
+      "correctAnswer": "To break down food and absorb nutrients",
+      "wrongAnswers": ["To circulate blood", "To filter waste", "To protect the body"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of muscle is found in the heart?",
+      "correctAnswer": "Cardiac muscle",
+      "wrongAnswers": ["Skeletal muscle", "Smooth muscle", "Striated muscle"],
+      "timeout": 15
+    },
+    {
+      "question": "What part of the brain controls balance and coordination?",
+      "correctAnswer": "Cerebellum",
+      "wrongAnswers": ["Cerebrum", "Brainstem", "Thalamus"],
+      "timeout": 15
+    },
+    {
+      "question": "Which system is responsible for defending the body against pathogens?",
+      "correctAnswer": "Immune system",
+      "wrongAnswers": ["Nervous system", "Digestive system", "Endocrine system"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary function of the lymphatic system?",
+      "correctAnswer": "To transport lymph and help fight infections",
+      "wrongAnswers": ["To circulate blood", "To digest food", "To excrete waste"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the largest organ in the human body?",
+      "correctAnswer": "Skin",
+      "wrongAnswers": ["Liver", "Heart", "Lungs"],
+      "timeout": 15
+    },
+    {
+      "question": "Which type of joint allows for the greatest range of motion?",
+      "correctAnswer": "Ball and socket joint",
+      "wrongAnswers": ["Hinge joint", "Pivot joint", "Saddle joint"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the role of red blood cells?",
+      "correctAnswer": "To carry oxygen to body tissues",
+      "wrongAnswers": ["To fight infections", "To produce hormones", "To clot blood"],
+      "timeout": 15
+    },
+    {
+      "question": "Which system is responsible for movement?",
+      "correctAnswer": "Muscular system",
+      "wrongAnswers": ["Nervous system", "Endocrine system", "Respiratory system"],
+      "timeout": 15
+    },
+    {
+      "question": "What structure connects muscles to bones?",
+      "correctAnswer": "Tendons",
+      "wrongAnswers": ["Ligaments", "Cartilage", "Fascia"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of tissue covers the body and lines cavities?",
+      "correctAnswer": "Epithelial tissue",
+      "wrongAnswers": ["Connective tissue", "Muscle tissue", "Nervous tissue"],
+      "timeout": 15
+    },
+    {
+      "question": "Which part of the neuron receives signals?",
+      "correctAnswer": "Dendrites",
+      "wrongAnswers": ["Axon", "Soma", "Myelin sheath"],
+      "timeout": 15
+    },
+    {
+      "question": "Which hormone regulates metabolism?",
+      "correctAnswer": "Thyroxine",
+      "wrongAnswers": ["Insulin", "Adrenaline", "Cortisol"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary function of the spleen?",
+      "correctAnswer": "To filter blood and recycle iron",
+      "wrongAnswers": ["To produce insulin", "To store bile", "To absorb nutrients"],
+      "timeout": 15
+    },
+    {
+      "question": "Which gas do we primarily exhale?",
+      "correctAnswer": "Carbon dioxide",
+      "wrongAnswers": ["Oxygen", "Nitrogen", "Hydrogen"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the basic unit of life?",
+      "correctAnswer": "Cell",
+      "wrongAnswers": ["Tissue", "Organ", "System"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the term for the body's ability to maintain a stable internal environment?",
+      "correctAnswer": "Homeostasis",
+      "wrongAnswers": ["Metabolism", "Growth", "Reproduction"],
+      "timeout": 15
+    },
+    {
+      "question": "What part of the heart pumps oxygenated blood to the body?",
+      "correctAnswer": "Left ventricle",
+      "wrongAnswers": ["Right ventricle", "Left atrium", "Right atrium"],
+      "timeout": 15
+    },
+    {
+      "question": "Which system regulates body temperature?",
+      "correctAnswer": "Integumentary system",
+      "wrongAnswers": ["Nervous system", "Endocrine system", "Skeletal system"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the main function of the gallbladder?",
+      "correctAnswer": "To store bile",
+      "wrongAnswers": ["To produce insulin", "To filter blood", "To absorb nutrients"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the main function of the small intestine?",
+      "correctAnswer": "To absorb nutrients",
+      "wrongAnswers": ["To digest fats", "To store food", "To produce enzymes"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of blood vessel carries blood away from the heart?",
+      "correctAnswer": "Artery",
+      "wrongAnswers": ["Vein", "Capillary", "Venule"],
+      "timeout": 15
+    },
+    {
+      "question": "Which system is primarily responsible for coordination and response?",
+      "correctAnswer": "Nervous system",
+      "wrongAnswers": ["Muscular system", "Circulatory system", "Respiratory system"],
+      "timeout": 15
+    },
+    {
+      "question": "Which organ is responsible for detoxifying chemicals?",
+      "correctAnswer": "Liver",
+      "wrongAnswers": ["Kidneys", "Pancreas", "Spleen"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the basic structure of the lungs called?",
+      "correctAnswer": "Alveoli",
+      "wrongAnswers": ["Bronchi", "Trachea", "Diaphragm"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the role of platelets?",
+      "correctAnswer": "To help with blood clotting",
+      "wrongAnswers": ["To carry oxygen", "To fight infection", "To transport nutrients"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the term for the study of the body's structures?",
+      "correctAnswer": "Anatomy",
+      "wrongAnswers": ["Physiology", "Histology", "Pathology"],
+      "timeout": 15
+    },
+    {
+      "question": "Which system is responsible for reproduction?",
+      "correctAnswer": "Reproductive system",
+      "wrongAnswers": ["Nervous system", "Endocrine system", "Skeletal system"],
+      "timeout": 15
+    },
+    {
+      "question": "What structure protects the brain?",
+      "correctAnswer": "Skull",
+      "wrongAnswers": ["Spine", "Ribs", "Pelvis"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary function of the thyroid gland?",
+      "correctAnswer": "To regulate metabolism",
+      "wrongAnswers": ["To produce insulin", "To filter blood", "To store bile"],
+      "timeout": 15
+    },
+    {
+      "question": "Which part of the digestive system is primarily responsible for water absorption?",
+      "correctAnswer": "Large intestine",
+      "wrongAnswers": ["Small intestine", "Stomach", "Esophagus"],
+      "timeout": 15
+    },
+    {
+      "question": "Which muscle is responsible for breathing?",
+      "correctAnswer": "Diaphragm",
+      "wrongAnswers": ["Intercostal muscles", "Abdominal muscles", "Pectoral muscles"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the role of the pancreas in digestion?",
+      "correctAnswer": "To produce digestive enzymes and hormones",
+      "wrongAnswers": ["To absorb nutrients", "To store bile", "To filter blood"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary function of the adrenal glands?",
+      "correctAnswer": "To produce stress hormones",
+      "wrongAnswers": ["To regulate blood sugar", "To filter blood", "To produce digestive enzymes"],
+      "timeout": 15
+    },
+    {
+      "question": "Which part of the body is responsible for hearing?",
+      "correctAnswer": "Ears",
+      "wrongAnswers": ["Eyes", "Nose", "Mouth"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary role of the immune system?",
+      "correctAnswer": "To protect the body from disease",
+      "wrongAnswers": ["To transport oxygen", "To digest food", "To regulate temperature"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the main function of the skeletal system?",
+      "correctAnswer": "To provide structure and support",
+      "wrongAnswers": ["To circulate blood", "To store nutrients", "To produce hormones"],
+      "timeout": 15
+    }
+  ],
+  "time given": "600"
+}

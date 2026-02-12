@@ -1,0 +1,234 @@
+{
+  "title": "Myanmar",
+  "listOfQuestions": [
+    {
+      "question": "What is the capital city of Myanmar?",
+      "correctAnswer": "Naypyidaw",
+      "wrongAnswers": ["Yangon", "Mandalay", "Bagan"],
+      "timeout": 15
+    },
+    {
+      "question": "Which river is the longest in Myanmar?",
+      "correctAnswer": "Irrawaddy River",
+      "wrongAnswers": ["Salween River", "Chao Phraya", "Mekong River"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the official language of Myanmar?",
+      "correctAnswer": "Burmese",
+      "wrongAnswers": ["Thai", "Vietnamese", "English"],
+      "timeout": 15
+    },
+    {
+      "question": "Which ethnic group is the largest in Myanmar?",
+      "correctAnswer": "Bamar",
+      "wrongAnswers": ["Shan", "Karen", "Rohingya"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the currency used in Myanmar?",
+      "correctAnswer": "Kyat",
+      "wrongAnswers": ["Baht", "Rupiah", "Dollar"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the predominant religion in Myanmar?",
+      "correctAnswer": "Buddhism",
+      "wrongAnswers": ["Christianity", "Islam", "Hinduism"],
+      "timeout": 15
+    },
+    {
+      "question": "Which famous temple complex is located in Bagan?",
+      "correctAnswer": "Ananda Temple",
+      "wrongAnswers": ["Shwedagon Pagoda", "Sulamani Temple", "Kyaiktiyo Pagoda"],
+      "timeout": 15
+    },
+    {
+      "question": "In which year did Myanmar gain independence from British rule?",
+      "correctAnswer": "1948",
+      "wrongAnswers": ["1937", "1950", "1962"],
+      "timeout": 15
+    },
+    {
+      "question": "Who was the leader of Myanmar's National League for Democracy?",
+      "correctAnswer": "Aung San Suu Kyi",
+      "wrongAnswers": ["Min Aung Hlaing", "U Htin Kyaw", "Than Shwe"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the military in Myanmar?",
+      "correctAnswer": "Tatmadaw",
+      "wrongAnswers": ["Kachin Army", "Arakan Army", "Karen National Liberation Army"],
+      "timeout": 15
+    },
+    {
+      "question": "Which country shares the longest border with Myanmar?",
+      "correctAnswer": "China",
+      "wrongAnswers": ["India", "Thailand", "Laos"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the famous golden pagoda in Yangon?",
+      "correctAnswer": "Shwedagon Pagoda",
+      "wrongAnswers": ["Kyaiktiyo Pagoda", "Bodhi Tree", "Mahamuni Pagoda"],
+      "timeout": 15
+    },
+    {
+      "question": "Which ethnic group is primarily located in the northern regions of Myanmar?",
+      "correctAnswer": "Kachin",
+      "wrongAnswers": ["Karen", "Shan", "Mon"],
+      "timeout": 15
+    },
+    {
+      "question": "In which year did the military coup take place in Myanmar, leading to widespread protests?",
+      "correctAnswer": "2021",
+      "wrongAnswers": ["2019", "2020", "2015"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of government was established in Myanmar in 2011?",
+      "correctAnswer": "Semi-democracy",
+      "wrongAnswers": ["Full democracy", "Military dictatorship", "Absolute monarchy"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the predominant climate in Myanmar?",
+      "correctAnswer": "Tropical monsoon",
+      "wrongAnswers": ["Desert", "Temperate", "Arctic"],
+      "timeout": 15
+    },
+    {
+      "question": "Which natural disaster struck Myanmar in 2008?",
+      "correctAnswer": "Cyclone Nargis",
+      "wrongAnswers": ["Earthquake", "Flood", "Tsunami"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the traditional puppet theater of Myanmar called?",
+      "correctAnswer": "Yoke thé",
+      "wrongAnswers": ["Wayang kulit", "Kabuki", "Peking opera"],
+      "timeout": 15
+    },
+    {
+      "question": "Which festival is celebrated to mark the end of Buddhist Lent in Myanmar?",
+      "correctAnswer": "Thadingyut",
+      "wrongAnswers": ["Thingyan", "Tazaungdaing", "Kason"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the main export of Myanmar?",
+      "correctAnswer": "Natural gas",
+      "wrongAnswers": ["Rice", "Textiles", "Timber"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of traditional dress is commonly worn in Myanmar?",
+      "correctAnswer": "Longyi",
+      "wrongAnswers": ["Sari", "Kimono", "Cheongsam"],
+      "timeout": 15
+    },
+    {
+      "question": "Which UNESCO World Heritage Site is located in Myanmar?",
+      "correctAnswer": "Ancient Bagan",
+      "wrongAnswers": ["Angkor Wat", "Great Wall of China", "Taj Mahal"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the lake that is known for its floating gardens?",
+      "correctAnswer": "Inle Lake",
+      "wrongAnswers": ["Dal Lake", "Lake Victoria", "Lake Baikal"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the traditional Burmese New Year festival called?",
+      "correctAnswer": "Thingyan",
+      "wrongAnswers": ["Diwali", "Songkran", "Lunar New Year"],
+      "timeout": 15
+    },
+    {
+      "question": "Which country is located to the west of Myanmar?",
+      "correctAnswer": "India",
+      "wrongAnswers": ["Bangladesh", "Thailand", "Laos"],
+      "timeout": 15
+    },
+    {
+      "question": "What is a popular dish from Myanmar?",
+      "correctAnswer": "Mohinga",
+      "wrongAnswers": ["Pad Thai", "Pho", "Sushi"],
+      "timeout": 15
+    },
+    {
+      "question": "Which is the largest city in Myanmar?",
+      "correctAnswer": "Yangon",
+      "wrongAnswers": ["Mandalay", "Naypyidaw", "Bagan"],
+      "timeout": 15
+    },
+    {
+      "question": "What animal is considered sacred in Myanmar?",
+      "correctAnswer": "Elephant",
+      "wrongAnswers": ["Tiger", "Horse", "Monkey"],
+      "timeout": 15
+    },
+    {
+      "question": "Which ethnic group predominantly practices Christianity in Myanmar?",
+      "correctAnswer": "Kachin",
+      "wrongAnswers": ["Bamar", "Shan", "Karen"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the most important Buddhist text in Myanmar?",
+      "correctAnswer": "Tipitaka",
+      "wrongAnswers": ["Bhagavad Gita", "Quran", "Bible"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the traditional Burmese art of tattooing called?",
+      "correctAnswer": "Burmese tattoo",
+      "wrongAnswers": ["Sak Yant", "Henna", "Irezumi"],
+      "timeout": 15
+    },
+    {
+      "question": "Which region of Myanmar is famous for its tea production?",
+      "correctAnswer": "Shan State",
+      "wrongAnswers": ["Kachin State", "Mandalay Region", "Tanintharyi Region"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the famous hill station in Myanmar?",
+      "correctAnswer": "Pyin Oo Lwin",
+      "wrongAnswers": ["Hpa-An", "Kalaw", "Taunggyi"],
+      "timeout": 15
+    },
+    {
+      "question": "Which city is known for its colonial architecture and the old railway station?",
+      "correctAnswer": "Yangon",
+      "wrongAnswers": ["Mandalay", "Naypyidaw", "Bagan"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the festival of lights celebrated in Myanmar?",
+      "correctAnswer": "Tazaungdaing",
+      "wrongAnswers": ["Diwali", "Loi Krathong", "Hanukkah"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the predominant ethnic group in the Ayeyarwady Region?",
+      "correctAnswer": "Bamar",
+      "wrongAnswers": ["Shan", "Karen", "Mon"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the national flower of Myanmar?",
+      "correctAnswer": "Paduak",
+      "wrongAnswers": ["Lotus", "Cherry Blossom", "Rose"],
+      "timeout": 15
+    },
+    {
+      "question": "Which city is known as the cultural capital of Myanmar?",
+      "correctAnswer": "Mandalay",
+      "wrongAnswers": ["Yangon", "Naypyidaw", "Bagan"],
+      "timeout": 15
+    }
+  ],
+  "time given": "600"
+}

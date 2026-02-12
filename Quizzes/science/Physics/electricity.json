@@ -1,0 +1,216 @@
+{
+  "title": "Electricity",
+  "listOfQuestions": [
+    {
+      "question": "What is the unit of electric current?",
+      "correctAnswer": "Ampere",
+      "wrongAnswers": ["Volt", "Ohm", "Watt"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary source of electrical energy in power plants?",
+      "correctAnswer": "Fossil fuels",
+      "wrongAnswers": ["Nuclear", "Wind", "Solar"],
+      "timeout": 15
+    },
+    {
+      "question": "What device is used to measure electric voltage?",
+      "correctAnswer": "Voltmeter",
+      "wrongAnswers": ["Ammeter", "Ohmmeter", "Wattmeter"],
+      "timeout": 15
+    },
+    {
+      "question": "What is Ohm's Law?",
+      "correctAnswer": "V = IR",
+      "wrongAnswers": ["P = IV", "E = mc^2", "F = ma"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following materials is a good conductor of electricity?",
+      "correctAnswer": "Copper",
+      "wrongAnswers": ["Rubber", "Wood", "Glass"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the SI unit of electric charge?",
+      "correctAnswer": "Coulomb",
+      "wrongAnswers": ["Ampere", "Volt", "Watt"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of circuit has only one path for current to flow?",
+      "correctAnswer": "Series circuit",
+      "wrongAnswers": ["Parallel circuit", "Complex circuit", "Open circuit"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the main function of a transformer?",
+      "correctAnswer": "To change voltage levels",
+      "wrongAnswers": ["To generate electricity", "To store electricity", "To measure current"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a renewable source of energy?",
+      "correctAnswer": "Solar power",
+      "wrongAnswers": ["Coal", "Natural gas", "Nuclear"],
+      "timeout": 15
+    },
+    {
+      "question": "What happens to resistance in a conductor if the temperature increases?",
+      "correctAnswer": "Resistance increases",
+      "wrongAnswers": ["Resistance decreases", "Resistance stays the same", "Resistance fluctuates"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the purpose of an insulator?",
+      "correctAnswer": "To prevent the flow of electricity",
+      "wrongAnswers": ["To enhance the flow of electricity", "To measure electricity", "To generate electricity"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the frequency of AC in most households?",
+      "correctAnswer": "60 Hz",
+      "wrongAnswers": ["50 Hz", "100 Hz", "30 Hz"],
+      "timeout": 15
+    },
+    {
+      "question": "What device converts electrical energy into mechanical energy?",
+      "correctAnswer": "Electric motor",
+      "wrongAnswers": ["Generator", "Transformer", "Capacitor"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the term for the flow of electric charge?",
+      "correctAnswer": "Current",
+      "wrongAnswers": ["Voltage", "Resistance", "Power"],
+      "timeout": 15
+    },
+    {
+      "question": "What is a common use for a capacitor?",
+      "correctAnswer": "Storing electrical energy",
+      "wrongAnswers": ["Generating electricity", "Measuring current", "Transforming voltage"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the device called that protects a circuit from overload?",
+      "correctAnswer": "Circuit breaker",
+      "wrongAnswers": ["Fuse", "Resistor", "Transistor"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the power rating of a device that uses 2 Amperes at 120 Volts?",
+      "correctAnswer": "240 Watts",
+      "wrongAnswers": ["120 Watts", "60 Watts", "300 Watts"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the process of converting AC to DC called?",
+      "correctAnswer": "Rectification",
+      "wrongAnswers": ["Inversion", "Transmission", "Transformation"],
+      "timeout": 15
+    },
+    {
+      "question": "Which law states that the total current entering a junction equals the total current leaving?",
+      "correctAnswer": "Kirchhoff's Current Law",
+      "wrongAnswers": ["Ohm's Law", "Faraday's Law", "Kirchhoff's Voltage Law"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the role of a resistor in a circuit?",
+      "correctAnswer": "To limit current",
+      "wrongAnswers": ["To store energy", "To increase voltage", "To measure resistance"],
+      "timeout": 15
+    },
+    {
+      "question": "What is static electricity?",
+      "correctAnswer": "Accumulation of electric charge on a surface",
+      "wrongAnswers": ["Flow of current", "Electricity in motion", "Electricity produced by batteries"],
+      "timeout": 15
+    },
+    {
+      "question": "What does a diode do?",
+      "correctAnswer": "Allows current to flow in one direction",
+      "wrongAnswers": ["Stores energy", "Increases voltage", "Measures current"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the voltage of a standard household outlet in the U.S.?",
+      "correctAnswer": "120 Volts",
+      "wrongAnswers": ["240 Volts", "90 Volts", "60 Volts"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of electricity is produced by solar panels?",
+      "correctAnswer": "Direct current (DC)",
+      "wrongAnswers": ["Alternating current (AC)", "Static electricity", "Induced current"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the function of a battery?",
+      "correctAnswer": "To store chemical energy and convert it to electrical energy",
+      "wrongAnswers": ["To produce mechanical energy", "To generate heat", "To measure resistance"],
+      "timeout": 15
+    },
+    {
+      "question": "What is a common use for a fuse?",
+      "correctAnswer": "To protect electrical circuits from overload",
+      "wrongAnswers": ["To increase current", "To measure voltage", "To store energy"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the term 'grounding' refer to in electrical systems?",
+      "correctAnswer": "Creating a safe path for electricity to flow into the earth",
+      "wrongAnswers": ["Increasing voltage", "Storing energy", "Diverting current"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary function of an inductor?",
+      "correctAnswer": "To store energy in a magnetic field",
+      "wrongAnswers": ["To store energy in an electric field", "To measure current", "To transform voltage"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the term for the opposition to the flow of electric current?",
+      "correctAnswer": "Resistance",
+      "wrongAnswers": ["Voltage", "Power", "Capacitance"],
+      "timeout": 15
+    },
+    {
+      "question": "What happens to the resistance in a series circuit if more resistors are added?",
+      "correctAnswer": "Resistance increases",
+      "wrongAnswers": ["Resistance decreases", "Resistance stays the same", "Resistance fluctuates"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the purpose of a relay in a circuit?",
+      "correctAnswer": "To control a high-power circuit with a low-power signal",
+      "wrongAnswers": ["To measure current", "To store energy", "To increase voltage"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the principle behind electromagnetism?",
+      "correctAnswer": "Electric current creates a magnetic field",
+      "wrongAnswers": ["Magnetic fields produce electric current", "Static electricity creates magnetism", "Electricity and magnetism are unrelated"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the term for the potential difference between two points in a circuit?",
+      "correctAnswer": "Voltage",
+      "wrongAnswers": ["Current", "Resistance", "Power"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the measurement of electrical power?",
+      "correctAnswer": "Watt",
+      "wrongAnswers": ["Volt", "Ampere", "Ohm"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the effect of adding resistors in parallel?",
+      "correctAnswer": "Total resistance decreases",
+      "wrongAnswers": ["Total resistance increases", "Total resistance remains the same", "Total resistance fluctuates"],
+      "timeout": 15
+    }
+  ],
+  "time given": "600"
+}

@@ -1,0 +1,210 @@
+{
+  "title": "Germany",
+  "listOfQuestions": [
+    {
+      "question": "What is the capital city of Germany?",
+      "correctAnswer": "Berlin",
+      "wrongAnswers": ["Munich", "Frankfurt", "Hamburg"],
+      "timeout": 15
+    },
+    {
+      "question": "Which river flows through Berlin?",
+      "correctAnswer": "Spree",
+      "wrongAnswers": ["Rhine", "Danube", "Elbe"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the currency used in Germany?",
+      "correctAnswer": "Euro",
+      "wrongAnswers": ["Mark", "Dollar", "Pound"],
+      "timeout": 15
+    },
+    {
+      "question": "Which famous landmark is located in Berlin?",
+      "correctAnswer": "Brandenburg Gate",
+      "wrongAnswers": ["Cologne Cathedral", "Neuschwanstein Castle", "Eiffel Tower"],
+      "timeout": 15
+    },
+    {
+      "question": "What is Germany's largest city by population?",
+      "correctAnswer": "Berlin",
+      "wrongAnswers": ["Hamburg", "Munich", "Cologne"],
+      "timeout": 15
+    },
+    {
+      "question": "In which year did Germany reunify?",
+      "correctAnswer": "1990",
+      "wrongAnswers": ["1989", "1991", "1992"],
+      "timeout": 15
+    },
+    {
+      "question": "Which German city is famous for its annual Oktoberfest?",
+      "correctAnswer": "Munich",
+      "wrongAnswers": ["Berlin", "Frankfurt", "Cologne"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the German word for 'peace'?",
+      "correctAnswer": "Frieden",
+      "wrongAnswers": ["Krieg", "Liebe", "Hoffnung"],
+      "timeout": 15
+    },
+    {
+      "question": "Which mountain range is located in Germany?",
+      "correctAnswer": "Bavarian Alps",
+      "wrongAnswers": ["Rocky Mountains", "Andes", "Himalayas"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the German national football team?",
+      "correctAnswer": "Die Mannschaft",
+      "wrongAnswers": ["Die Adler", "Die Löwen", "Die Bären"],
+      "timeout": 15
+    },
+    {
+      "question": "Which German city is known for its car industry, particularly BMW?",
+      "correctAnswer": "Munich",
+      "wrongAnswers": ["Stuttgart", "Berlin", "Hamburg"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the traditional German dish made of sausages, potatoes, and sauerkraut?",
+      "correctAnswer": "Bratwurst with Sauerkraut",
+      "wrongAnswers": ["Schnitzel", "Spätzle", "Wiener"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the famous German festival celebrating beer?",
+      "correctAnswer": "Oktoberfest",
+      "wrongAnswers": ["Karneval", "Weinfest", "Fest der Kulturen"],
+      "timeout": 15
+    },
+    {
+      "question": "Which German composer is known for the 'Moonlight Sonata'?",
+      "correctAnswer": "Ludwig van Beethoven",
+      "wrongAnswers": ["Johann Sebastian Bach", "Richard Wagner", "Wolfgang Amadeus Mozart"],
+      "timeout": 15
+    },
+    {
+      "question": "What is Germany's most popular sport?",
+      "correctAnswer": "Football (Soccer)",
+      "wrongAnswers": ["Basketball", "Handball", "Tennis"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the document that established the Federal Republic of Germany?",
+      "correctAnswer": "Grundgesetz",
+      "wrongAnswers": ["Weimar Constitution", "Basic Law", "German Constitution"],
+      "timeout": 15
+    },
+    {
+      "question": "Which German city is famous for its medieval architecture and Christmas markets?",
+      "correctAnswer": "Nuremberg",
+      "wrongAnswers": ["Dresden", "Berlin", "Hamburg"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the German Parliament?",
+      "correctAnswer": "Bundestag",
+      "wrongAnswers": ["Bundesrat", "Reichstag", "Nationalversammlung"],
+      "timeout": 15
+    },
+    {
+      "question": "Which German physicist developed the theory of relativity?",
+      "correctAnswer": "Albert Einstein",
+      "wrongAnswers": ["Max Planck", "Werner Heisenberg", "Niels Bohr"],
+      "timeout": 15
+    },
+    {
+      "question": "What color is the flag of Germany?",
+      "correctAnswer": "Black, Red, Gold",
+      "wrongAnswers": ["Red, White, Blue", "Black, Yellow, Green", "Blue, White, Red"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the famous German castle that inspired Disney's Cinderella Castle?",
+      "correctAnswer": "Neuschwanstein Castle",
+      "wrongAnswers": ["Hohenzollern Castle", "Heidelberg Castle", "Burg Eltz"],
+      "timeout": 15
+    },
+    {
+      "question": "Which German city is known as the 'Gateway to the World'?",
+      "correctAnswer": "Hamburg",
+      "wrongAnswers": ["Berlin", "Cologne", "Frankfurt"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary drink served at Oktoberfest?",
+      "correctAnswer": "Beer",
+      "wrongAnswers": ["Wine", "Soda", "Juice"],
+      "timeout": 15
+    },
+    {
+      "question": "Which German city is home to the famous Berlin Wall?",
+      "correctAnswer": "Berlin",
+      "wrongAnswers": ["Dresden", "Munich", "Cologne"],
+      "timeout": 15
+    },
+    {
+      "question": "Who was the first Chancellor of West Germany?",
+      "correctAnswer": "Konrad Adenauer",
+      "wrongAnswers": ["Helmut Kohl", "Willy Brandt", "Gerhard Schröder"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the traditional German bread?",
+      "correctAnswer": "Brot",
+      "wrongAnswers": ["Baguette", "Ciabatta", "Pita"],
+      "timeout": 15
+    },
+    {
+      "question": "What is Germany's national flower?",
+      "correctAnswer": "Cornflower",
+      "wrongAnswers": ["Rose", "Daisy", "Tulip"],
+      "timeout": 15
+    },
+    {
+      "question": "Which German city is known for its historic university?",
+      "correctAnswer": "Heidelberg",
+      "wrongAnswers": ["Leipzig", "Freiburg", "Göttingen"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the term for the German reunification process?",
+      "correctAnswer": "Wende",
+      "wrongAnswers": ["Aufbruch", "Einheit", "Freiheit"],
+      "timeout": 15
+    },
+    {
+      "question": "Which famous German fairy tale was written by the Brothers Grimm?",
+      "correctAnswer": "Hansel and Gretel",
+      "wrongAnswers": ["Cinderella", "Snow White", "Little Red Riding Hood"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the traditional German dessert made with layers of cake and cream?",
+      "correctAnswer": "Black Forest Cake",
+      "wrongAnswers": ["Tiramisu", "Cheesecake", "Pavlova"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the name of the German state known for its wine production?",
+      "correctAnswer": "Rhineland-Palatinate",
+      "wrongAnswers": ["Bavaria", "Saxony", "Thuringia"],
+      "timeout": 15
+    },
+    {
+      "question": "Which festival celebrates the arrival of spring in Germany?",
+      "correctAnswer": "Ostern (Easter)",
+      "wrongAnswers": ["Weihnachten (Christmas)", "Karneval", "Erntedankfest"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the largest lake in Germany?",
+      "correctAnswer": "Lake Constance",
+      "wrongAnswers": ["Lake Tegernsee", "Lake Neuchatel", "Lake Eder"],
+      "timeout": 15
+    }
+  ],
+  "time given": "600"
+}

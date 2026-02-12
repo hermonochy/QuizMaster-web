@@ -60,6 +60,41 @@ h2 {
     }
 }
 
+/* Music Control Styles */
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.music-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.music-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.music-btn:active {
+    transform: scale(0.95);
+}
+
 /* Home Screen Styles */
 .home-header {
     text-align: center;
@@ -101,6 +136,144 @@ h2 {
     font-weight: bold;
     margin-right: 12px;
     font-size: 18px;
+}
+
+/* Search Section Styles */
+.search-section {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+.search-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-bar button:hover:not(:disabled) {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.search-bar button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#searchResults {
+    animation: fadeIn 0.3s ease;
+}
+
+.search-header {
+    color: #667eea;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+}
+
+.search-results-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.search-result-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #667eea;
+}
+
+.search-result-title {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.search-result-info {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.search-result-btn {
+    width: 100%;
+    padding: 8px 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-result-btn:hover {
+    background: #764ba2;
+    transform: translateY(-1px);
+}
+
+.search-no-results {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Divider */
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ddd, transparent);
+    margin: 25px 0;
 }
 
 /* Quiz Screen Styles */
@@ -193,7 +366,7 @@ h2 {
     margin-top: 30px;
 }
 
-#startQuizBtn, #viewResultsBtn, #restartBtn, #homeBtn {
+#startQuizBtn, #viewResultsBtn, #restartBtn, #homeBtn, #searchBtn {
     flex: 1;
     padding: 12px 24px;
     border: none;
@@ -206,7 +379,7 @@ h2 {
     transition: all 0.3s ease;
 }
 
-#startQuizBtn:hover, #viewResultsBtn:hover, #restartBtn:hover, #homeBtn:hover {
+#startQuizBtn:hover, #viewResultsBtn:hover, #restartBtn:hover, #homeBtn:hover, #searchBtn:hover {
     background: #764ba2;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
@@ -387,5 +560,19 @@ h2 {
 
     .performance-stats {
         grid-template-columns: 1fr;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar button {
+        width: 100%;
+    }
+
+    .music-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 }

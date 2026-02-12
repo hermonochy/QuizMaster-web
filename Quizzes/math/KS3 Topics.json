@@ -1,0 +1,155 @@
+{
+  "title": "Mathematics Long Quiz: Indices, Expressions, Data, and More",
+  "listOfQuestions": [
+    {
+      "question": "Simplify the expression using indices: (2^3 times 2^4).",
+      "correctAnswer": "2^7",
+      "wrongAnswers": ["2^12", "2^1", "2^4"],
+      "timeout": 15
+    },
+    {
+      "question": "Calculate (5^2 times 5^3).",
+      "correctAnswer": "5^5",
+      "wrongAnswers": ["25", "125", "1250"],
+      "timeout": 15
+    },
+    {
+      "question": "Express 0.00056 in standard form.",
+      "correctAnswer": "5.6 × 10^{-4}",
+      "wrongAnswers": ["5.6 × 10^{4}", "5.6 × 10^{-3}", "0.56 × 10^{-3}"],
+      "timeout": 15
+    },
+    {
+      "question": "Estimate the value of (9.8 times 6.3).",
+      "correctAnswer": "about 62",
+      "wrongAnswers": ["about 50", "about 70", "about 80"],
+      "timeout": 15
+    },
+    {
+      "question": "Calculate (10^4 div 10^2).",
+      "correctAnswer": "10^{2}",
+      "wrongAnswers": ["10^{6}", "10^{2}", "10^{8}"],
+      "timeout": 15
+    },
+    {
+      "question": "What is (3^4 times 3^{-2})?",
+      "correctAnswer": "3^{2}",
+      "wrongAnswers": ["3^{6}", "3^{2}", "3^{-6}"],
+      "timeout": 15
+    },
+    {
+      "question": "If (a^3 = 64), what is the value of (a)?",
+      "correctAnswer": "4",
+      "wrongAnswers": ["8", "2", "16"],
+      "timeout": 15
+    },
+    {
+      "question": "Calculate the estimate for (45 times 98).",
+      "correctAnswer": "about 4400",
+      "wrongAnswers": ["about 450", "about 440", "about 4900"],
+      "timeout": 15
+    },
+    {
+      "question": "Express (7.2 times 10^3) in standard form.",
+      "correctAnswer": "7.2 × 10^3",
+      "wrongAnswers": ["72 × 10^2", "0.72 × 10^5", "7.2 × 10^4"],
+      "timeout": 15
+    },
+    {
+      "question": "Estimate the value of (6.7 times 8.3).",
+      "correctAnswer": "about 56",
+      "wrongAnswers": ["about 50", "about 60", "about 70"],
+      "timeout": 15
+    },
+    {
+      "question": "Calculate (2^5 div 2^3).",
+      "correctAnswer": "2^{2}",
+      "wrongAnswers": ["2^{8}", "2^{2}", "2^{15}"],
+      "timeout": 15
+    },
+    {
+      "question": "Express 125 in standard form.",
+      "correctAnswer": "1.25 × 10^2",
+      "wrongAnswers": ["12.5 × 10^1", "1.25 × 10^3", "125 × 10^0"],
+      "timeout": 15
+    },
+    {
+      "question": "Estimate (7.9 times 12.4).",
+      "correctAnswer": "about 98",
+      "wrongAnswers": ["about 87", "about 100", "about 110"],
+      "timeout": 15
+    },
+    {
+      "question": "Calculate (4^3).",
+      "correctAnswer": "64",
+      "wrongAnswers": ["12", "16", "256"],
+      "timeout": 15
+    },
+    {
+      "question": "Express 0.006 in standard form.",
+      "correctAnswer": "6.0 × 10^{-3}",
+      "wrongAnswers": ["6.0 × 10^{3}", "6.0 × 10^{-4}", "0.6 × 10^{-2}"],
+      "timeout": 15
+    },
+    {
+      "question": "Calculate the estimate of (23 times 47).",
+      "correctAnswer": "about 1100",
+      "wrongAnswers": ["about 1000", "about 1200", "about 900"],
+      "timeout": 15
+    },
+    {
+      "question": "Simplify: (10^6 div 10^3).",
+      "correctAnswer": "10^{3}",
+      "wrongAnswers": ["10^{9}", "10^{3}", "10^{-3}"],
+      "timeout": 15
+    },
+    {
+      "question": "Write 2.5 × 10^4 in standard form.",
+      "correctAnswer": "2.5 × 10^4",
+      "wrongAnswers": ["25 × 10^3", "2.5 × 10^5", "0.25 × 10^5"],
+      "timeout": 15
+    },
+    {
+      "question": "Estimate (8.7 times 6.4).",
+      "correctAnswer": "about 56",
+      "wrongAnswers": ["about 66", "about 52", "about 60"],
+      "timeout": 15
+    },
+    {
+      "question": "Calculate (5^3 times 5^2).",
+      "correctAnswer": "5^{5}",
+      "wrongAnswers": ["5^{6}", "25", "125"],
+      "timeout": 15
+    },
+    {
+      "question": "Express 0.00089 in standard form.",
+      "correctAnswer": "8.9 × 10^{-4}",
+      "wrongAnswers": ["8.9 × 10^{4}", "0.89 × 10^{-3}", "8.9 × 10^{3}"],
+      "timeout": 15
+    },
+    {
+      "question": "Estimate (34 times 27).",
+      "correctAnswer": "about 900",
+      "wrongAnswers": ["about 1000", "about 800", "about 1200"],
+      "timeout": 15
+    },
+    {
+      "question": "Calculate (3^5 div 3^2).",
+      "correctAnswer": "3^{3}",
+      "wrongAnswers": ["3^{7}", "3^{2}", "3^{10}"],
+      "timeout": 15
+    },
+    {
+      "question": "Express 4500 in standard form.",
+      "correctAnswer": "4.5 × 10^3",
+      "wrongAnswers": ["45 × 10^2", "0.45 × 10^4", "45 × 10^3"],
+      "timeout": 15
+    },
+    {
+      "question": "Estimate (9.5 times 11.2).",
+      "correctAnswer": "about 106",
+      "wrongAnswers": ["about 100", "about 110", "about 120"],
+      "timeout": 15
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "title": "Python!",
+  "listOfQuestions": [
+    {
+      "question": "What is the output of print(2 ** 3)?",
+      "correctAnswer": "8",
+      "wrongAnswers": ["6", "9", "3"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a mutable data type in Python?",
+      "correctAnswer": "List",
+      "wrongAnswers": ["Tuple", "String", "Integer"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the purpose of the 'self' keyword in Python?",
+      "correctAnswer": "Refers to the instance of the class",
+      "wrongAnswers": ["Refers to the class itself", "Refers to the parent class", "Refers to a global variable"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you create a function in Python?",
+      "correctAnswer": "def function_name():",
+      "wrongAnswers": ["function function_name():", "create function_name():", "def function_name[]:"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of print(type([]))?",
+      "correctAnswer": "<class 'list'>",
+      "wrongAnswers": ["<class 'tuple'>", "<class 'dict'>", "<class 'set'>"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you start a comment in Python?",
+      "correctAnswer": "#",
+      "wrongAnswers": ["//", "//!", "/*"],
+      "timeout": 15
+    },
+    {
+      "question": "What keyword is used to handle exceptions in Python?",
+      "correctAnswer": "try",
+      "wrongAnswers": ["except", "catch", "error"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is used to define a class in Python?",
+      "correctAnswer": "class",
+      "wrongAnswers": ["def", "object", "initialize"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of len('Hello World')?",
+      "correctAnswer": "11",
+      "wrongAnswers": ["10", "12", "5"],
+      "timeout": 15
+    },
+    {
+      "question": "Which built-in function can be used to get the maximum value from a list?",
+      "correctAnswer": "max()",
+      "wrongAnswers": ["maximum()", "high()", "top()"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you check the version of Python being used?",
+      "correctAnswer": "python --version",
+      "wrongAnswers": ["python -v", "python version", "python check"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the keyword used to define a constant variable?",
+      "correctAnswer": "There is no keyword for constants in Python",
+      "wrongAnswers": ["const", "constant", "final"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following methods can be used to add an item to a list?",
+      "correctAnswer": "append()",
+      "wrongAnswers": ["add()", "insert()", "push()"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of print('Hello' + ' World')?",
+      "correctAnswer": "Hello World",
+      "wrongAnswers": ["HelloWorld", "Hello + World", "'Hello' 'World'"],
+      "timeout": 15
+    },
+    {
+      "question": "What does 'len()' function do?",
+      "correctAnswer": "Returns the length of an object",
+      "wrongAnswers": ["Returns the type of an object", "Returns the first element", "Returns the last element"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you create a dictionary in Python?",
+      "correctAnswer": "{}",
+      "wrongAnswers": ["[]", "()", "<>"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is used for multi-line comments in Python?",
+      "correctAnswer": "\"\"\" comment \"\"\"",
+      "wrongAnswers": ["// comment", "/* comment */", "# comment"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of print(3 * 'abc')?",
+      "correctAnswer": "abcabcabc",
+      "wrongAnswers": ["abcabc", "abcabcabcabc", "3abc"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the correct way to create a set in Python?",
+      "correctAnswer": "set()",
+      "wrongAnswers": ["[]", "{}", "()"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a valid variable name?",
+      "correctAnswer": "var_name",
+      "wrongAnswers": ["1_variable", "var-name", "var name"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you read a file in Python?",
+      "correctAnswer": "open('file.txt', 'r')",
+      "wrongAnswers": ["read('file.txt')", "file('file.txt')", "open('file.txt')"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the 'break' statement do?",
+      "correctAnswer": "Exits the nearest enclosing loop",
+      "wrongAnswers": ["Exits the current function", "Stops the program", "Continues to the next iteration"],
+      "timeout": 15
+    },
+    {
+      "question": "How can you convert a string to an integer in Python?",
+      "correctAnswer": "int()",
+      "wrongAnswers": ["str()", "float()", "convert()"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is used to import a module in Python?",
+      "correctAnswer": "import module_name",
+      "wrongAnswers": ["include module_name", "require module_name", "using module_name"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the purpose of the 'pass' statement?",
+      "correctAnswer": "It does nothing; a placeholder",
+      "wrongAnswers": ["Stops the program", "Raises an error", "Continues to the next iteration"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of print(bool(0))?",
+      "correctAnswer": "False",
+      "wrongAnswers": ["True", "None", "Error"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the correct way to handle an exception?",
+      "correctAnswer": "try...except",
+      "wrongAnswers": ["catch...error", "try...catch", "exception...handle"],
+      "timeout": 15
+    },
+    {
+      "question": "Which keyword is used to define an inline function in Python?",
+      "correctAnswer": "lambda",
+      "wrongAnswers": ["func", "inline", "def"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the purpose of the 'return' statement?",
+      "correctAnswer": "Exits a function and returns a value",
+      "wrongAnswers": ["Continues the function", "Stops the program", "Prints a value"],
+      "timeout": 15
+    },
+    {
+      "question": "What will be the output of print([1, 2] == [1, 2])?",
+      "correctAnswer": "True",
+      "wrongAnswers": ["False", "Error", "None"],
+      "timeout": 15
+    },
+    {
+      "question": "Which function is used to get input from the user?",
+      "correctAnswer": "input()",
+      "wrongAnswers": ["get()", "scan()", "read()"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you create a virtual environment in Python?",
+      "correctAnswer": "python -m venv env_name",
+      "wrongAnswers": ["create env_name", "virtualenv env_name", "python env_name"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of print(5 // 2)?",
+      "correctAnswer": "2",
+      "wrongAnswers": ["2.5", "3", "1"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is not a valid Python data type?",
+      "correctAnswer": "Character",
+      "wrongAnswers": ["String", "List", "Dictionary"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of 'Hello'.upper()?",
+      "correctAnswer": "HELLO",
+      "wrongAnswers": ["Hello", "hello", "HELLO!"],
+      "timeout": 15
+    },
+    {
+      "question": "How can you remove an item from a list?",
+      "correctAnswer": "list.remove(item)",
+      "wrongAnswers": ["list.delete(item)", "list.pop(item)", "list.pop()"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the 'continue' statement do?",
+      "correctAnswer": "Skips the current iteration of the loop",
+      "wrongAnswers": ["Exits the loop", "Exits the function", "Stops the program"],
+      "timeout": 15
+    },
+    {
+      "question": "How can you create a tuple in Python?",
+      "correctAnswer": "(1, 2, 3)",
+      "wrongAnswers": ["[1, 2, 3]", "{1, 2, 3}", "<1, 2, 3>"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of print('Python'[-1])?",
+      "correctAnswer": "n",
+      "wrongAnswers": ["P", "o", "Error"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the purpose of the 'with' statement?",
+      "correctAnswer": "To wrap the execution of a block with methods defined by a context manager",
+      "wrongAnswers": ["To create a new thread", "To handle exceptions", "To define a function"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you write a single-line comment in Python?",
+      "correctAnswer": "# This is a comment",
+      "wrongAnswers": ["// This is a comment", "/* This is a comment */", "<-- This is a comment"],
+      "timeout": 15
+    },
+    {
+      "question": "Which method is used to sort a list in Python?",
+      "correctAnswer": "sort()",
+      "wrongAnswers": ["order()", "sorted()", "arrange()"],
+      "timeout": 15
+    },
+    {
+      "question": "What will be the output of print(10 % 3)?",
+      "correctAnswer": "1",
+      "wrongAnswers": ["3", "0", "10"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you define a class method?",
+      "correctAnswer": "@classmethod",
+      "wrongAnswers": ["@staticmethod", "@method", "@function"],
+      "timeout": 15
+    }
+  ],
+  "time given": "600"
+}

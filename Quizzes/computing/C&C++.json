@@ -1,0 +1,235 @@
+{
+  "title": "C and C++",
+  "listOfQuestions": [
+    {
+      "question": "What is the size of int?",
+      "correctAnswer": "Typically 4 bytes",
+      "wrongAnswers": ["2 bytes", "8 bytes", "16 bytes"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a C++ feature?",
+      "correctAnswer": "Inheritance",
+      "wrongAnswers": ["Pointers", "Preprocessor directives", "Structures"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the keyword 'const' signify?",
+      "correctAnswer": "The variable cannot be modified",
+      "wrongAnswers": ["The variable is constant in value", "The variable is a constant pointer", "The variable can only be modified by constructors"],
+      "timeout": 15
+    },
+    {
+      "question": "Which operator is used to access members of a structure in C?",
+      "correctAnswer": ".",
+      "wrongAnswers": ["->", "::", "&"],
+      "timeout": 15
+    },
+    {
+      "question": "In C++, what is the purpose of the 'virtual' keyword?",
+      "correctAnswer": "To enable polymorphism",
+      "wrongAnswers": ["To declare a constant method", "To declare a static method", "To define a new data type"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the 'new' keyword do in C++?",
+      "correctAnswer": "Allocates memory dynamically",
+      "wrongAnswers": ["Creates a new variable", "Declares a new function", "Defines a new class"],
+      "timeout": 15
+    },
+    {
+      "question": "Which function is used to read a string in C?",
+      "correctAnswer": "scanf",
+      "wrongAnswers": ["getchar", "cout", "cin"],
+      "timeout": 15
+    },
+    {
+      "question": "What is a pointer?",
+      "correctAnswer": "A variable that stores the address of another variable",
+      "wrongAnswers": ["A variable that stores a constant value", "A variable that stores an array", "A variable that stores a function"],
+      "timeout": 15
+    },
+    {
+      "question": "What does 'std::cout' represent in C++?",
+      "correctAnswer": "Standard output stream",
+      "wrongAnswers": ["Standard input stream", "Standard error stream", "Standard string stream"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you declare a function in C?",
+      "correctAnswer": "returnType functionName(parameters) {}",
+      "wrongAnswers": ["functionName(parameters) returnType {}", "returnType functionName[]", "functionName returnType(parameters)"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the default access specifier for class members in C++?",
+      "correctAnswer": "private",
+      "wrongAnswers": ["public", "protected", "friend"],
+      "timeout": 15
+    },
+    {
+      "question": "Which header file is required for using 'cout' in C++?",
+      "correctAnswer": "<iostream>",
+      "wrongAnswers": ["<stdio.h>", "<stdlib.h>", "<string.h>"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the output of 'printf(\"%d\", 5 + 2);' in C?",
+      "correctAnswer": "7",
+      "wrongAnswers": ["5", "2", "Error"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is not a valid C++ data type?",
+      "correctAnswer": "float64",
+      "wrongAnswers": ["int", "double", "char"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the 'this' pointer refer to in C++?",
+      "correctAnswer": "The current object",
+      "wrongAnswers": ["The base class", "The derived class", "The static member"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you define a macro in C?",
+      "correctAnswer": "#define MACRO_NAME value",
+      "wrongAnswers": ["macro MACRO_NAME = value", "define MACRO_NAME value", "value = MACRO_NAME"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the purpose of a destructor in C++?",
+      "correctAnswer": "To clean up resources when an object is destroyed",
+      "wrongAnswers": ["To initialize resources", "To copy objects", "To overload operators"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a valid C++ comment?",
+      "correctAnswer": "// This is a comment",
+      "wrongAnswers": ["/* This is a comment */", "# This is a comment", "<-- This is a comment -->"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the result of dividing an integer by zero in C?",
+      "correctAnswer": "Undefined behavior",
+      "wrongAnswers": ["0", "Infinity", "Compiler error"],
+      "timeout": 15
+    },
+    {
+      "question": "Which operator is used for pointer arithmetic?",
+      "correctAnswer": "+",
+      "wrongAnswers": ["-", "*", "/"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the purpose of the 'friend' keyword in C++?",
+      "correctAnswer": "To allow access to private members of a class",
+      "wrongAnswers": ["To declare a constant function", "To define a new operator", "To create a new class"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a loop construct in C?",
+      "correctAnswer": "for",
+      "wrongAnswers": ["then", "until", "foreach"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the result of the expression 10 % 3 in C?",
+      "correctAnswer": "1",
+      "wrongAnswers": ["0", "3", "10"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a valid declaration of a pointer in C?",
+      "correctAnswer": "int *ptr;",
+      "wrongAnswers": ["int ptr;", "ptr int;", "int &ptr;"],
+      "timeout": 15
+    },
+    {
+      "question": "How do you include a standard library in C?",
+      "correctAnswer": "#include <library_name>",
+      "wrongAnswers": ["include <library_name>", "import <library_name>", "#library <library_name>"],
+      "timeout": 15
+    },
+    {
+      "question": "What is 'RAII' in C++?",
+      "correctAnswer": "Resource Acquisition Is Initialization",
+      "wrongAnswers": ["Resource Allocation Is Interface", "Resource Access Is Integrity", "Resource Allocation Is Initialization"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the 'static' keyword mean when applied to a variable in C?",
+      "correctAnswer": "The variable retains its value between function calls",
+      "wrongAnswers": ["The variable is only accessible within the function", "The variable is shared among all instances", "The variable is constant"],
+      "timeout": 15
+    },
+    {
+      "question": "What is a 'segmentation fault'?",
+      "correctAnswer": "Accessing memory that you're not allowed to",
+      "wrongAnswers": ["A type of exception", "Memory leak", "Stack overflow"],
+      "timeout": 15
+    },
+    {
+      "question": "What does 'sizeof' do?",
+      "correctAnswer": "Returns the size of a data type",
+      "wrongAnswers": ["Returns the length of a string", "Returns the total number of elements in an array", "Returns the address of a variable"],
+      "timeout": 15
+    },
+    {
+      "question": "What is a 'template' in C++?",
+      "correctAnswer": "A blueprint for creating functions or classes",
+      "wrongAnswers": ["A type of comment", "A method for error handling", "A tool for debugging"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the 'delete' operator do?",
+      "correctAnswer": "Deallocates memory previously allocated with 'new'",
+      "wrongAnswers": ["Deletes a variable", "Removes a class definition", "Frees up stack memory"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the difference between 'struct' and 'class' in C++?",
+      "correctAnswer": "Members of a struct are public by default, while members of a class are private",
+      "wrongAnswers": ["There is no difference", "Structs cannot have methods", "Classes can only have private members"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a valid way to create a string in C++?",
+      "correctAnswer": "std::string str = \"Hello\";",
+      "wrongAnswers": ["char str[] = \"Hello\";", "string str = \"Hello\";", "str = \"Hello\";"],
+      "timeout": 15
+    },
+    {
+      "question": "Which statement is used to exit a loop in C?",
+      "correctAnswer": "break",
+      "wrongAnswers": ["continue", "exit", "stop"],
+      "timeout": 15
+    },
+    {
+      "question": "What does the 'C++ 11' standard introduce?",
+      "correctAnswer": "Lambda expressions",
+      "wrongAnswers": ["Garbage collection", "Pointers to functions", "Multi-threading"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is a valid C++ constructor?",
+      "correctAnswer": "ClassName()",
+      "wrongAnswers": ["void ClassName()", "ClassName[]", "ClassName:()"],
+      "timeout": 15
+    },
+    {
+      "question": "What is an inline function in C++?",
+      "correctAnswer": "A function that is expanded in line when called",
+      "wrongAnswers": ["A function that cannot be called", "A function that only returns a value", "A function that has no parameters"],
+      "timeout": 15
+    },
+    {
+      "question": "What does 'nullptr' represent in C++?",
+      "correctAnswer": "A null pointer",
+      "wrongAnswers": ["An undefined variable", "A constant pointer", "A pointer to a function"],
+      "timeout": 15
+    }
+  ],
+  "time given": "600"
+}
+

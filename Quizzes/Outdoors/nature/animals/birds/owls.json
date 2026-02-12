@@ -1,0 +1,215 @@
+{
+  "title": "Owls",
+  "listOfQuestions": [
+    {
+      "question": "What is the scientific order that owls belong to?",
+      "correctAnswer": "Strigiformes",
+      "wrongAnswers": ["Accipitriformes", "Falconiformes", "Corvidae"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of diet do most owls have?",
+      "correctAnswer": "Carnivorous",
+      "wrongAnswers": ["Herbivorous", "Omnivorous", "Insectivorous"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl is known for its distinctive tufts that resemble ears?",
+      "correctAnswer": "Great Horned Owl",
+      "wrongAnswers": ["Barn Owl", "Snowy Owl", "Eastern Screech Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary hunting method used by owls?",
+      "correctAnswer": "Silent flight",
+      "wrongAnswers": ["Diving", "Walking", "Swimming"],
+      "timeout": 15
+    },
+    {
+      "question": "How many species of owls are there approximately worldwide?",
+      "correctAnswer": "Over 200",
+      "wrongAnswers": ["About 100", "Around 150", "More than 300"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl is known for its white plumage?",
+      "correctAnswer": "Snowy Owl",
+      "wrongAnswers": ["Burrowing Owl", "Great Horned Owl", "Barn Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "What do you call a group of owls?",
+      "correctAnswer": "Parliament",
+      "wrongAnswers": ["Horde", "Murder", "Flock"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl is famous for its heart-shaped face?",
+      "correctAnswer": "Barn Owl",
+      "wrongAnswers": ["Eurasian Eagle-Owl", "Screech Owl", "Burrowing Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary habitat of strix owls?",
+      "correctAnswer": "Forests",
+      "wrongAnswers": ["Deserts", "Grasslands", "Urban areas"],
+      "timeout": 15
+    },
+    {
+      "question": "Owls can rotate their heads up to how many degrees?",
+      "correctAnswer": "270 degrees",
+      "wrongAnswers": ["180 degrees", "360 degrees", "90 degrees"],
+      "timeout": 15
+    },
+    {
+      "question": "What kind of eyes do owls have?",
+      "correctAnswer": "Large and forward-facing",
+      "wrongAnswers": ["Small and side-facing", "Normal-sized and upward-facing", "Round and down-facing"],
+      "timeout": 15
+    },
+    {
+      "question": "What do owls regurgitate after eating?",
+      "correctAnswer": "Pellets",
+      "wrongAnswers": ["Feathers", "Bones", "Fur"],
+      "timeout": 15
+    },
+    {
+      "question": "Bigger owl species generally live shorter lives.",
+      "correctAnswer": "False",
+      "wrongAnswers": ["True"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the main threat to owl populations?",
+      "correctAnswer": "Habitat loss",
+      "wrongAnswers": ["Hunting", "Climate change", "Pollution"],
+      "timeout": 15
+    },
+    {
+      "question": "Which part of an owl's anatomy helps it to fly silently?",
+      "correctAnswer": "Non-waterproof feathers",
+      "wrongAnswers": ["Lightweight bones", "Large wingspan", "Strong muscles"],
+      "timeout": 15
+    },
+    {
+      "question": "What time of day are Barn owls most active?",
+      "correctAnswer": "Dawn and Dusk",
+      "wrongAnswers": ["Day", "Night", "Midday"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl is known for its distinctive 'Twoo' call?",
+      "correctAnswer": "Tawny Owl",
+      "wrongAnswers": ["Barn Owl", "Snowy Owl", "Screech Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "Owls are most closely related to hummingbirds than eagles.",
+      "correctAnswer": "True",
+      "wrongAnswers": ["False"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of nest do owls typically use?",
+      "correctAnswer": "Tree cavities or abandoned nests",
+      "wrongAnswers": ["Ground nests", "Man-made nests", "Bush nests"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary food source for most owls?",
+      "correctAnswer": "Rodents",
+      "wrongAnswers": ["Insects", "Fruits", "Fish"],
+      "timeout": 15
+    },
+    {
+      "question": "How do owls find their prey in the dark?",
+      "correctAnswer": "Acute senses and silent flight",
+      "wrongAnswers": ["Using echolocation", "By taste", "Following scents"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl species is known for being a migratory bird?",
+      "correctAnswer": "Northern Saw-whet Owl",
+      "wrongAnswers": ["Great Horned Owl", "Barred Owl", "Barn Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary purpose of an owl's facial disc?",
+      "correctAnswer": "To funnel sound to their ears",
+      "wrongAnswers": ["To help them see better", "To attract mates", "To assist in flight"],
+      "timeout": 15
+    },
+    {
+      "question": "What colour are the eyes of a Great Grey Owl?",
+      "correctAnswer": "Yellow",
+      "wrongAnswers": ["Black", "Blue", "Green"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl is one of the smallest species?",
+      "correctAnswer": "Elf Owl",
+      "wrongAnswers": ["Burrowing Owl", "Northern Saw-whet Owl", "Screech Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "Owls have the ability to see in what range of light?",
+      "correctAnswer": "Low light conditions",
+      "wrongAnswers": ["Bright light", "UV light", "All light"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of owl is known for its very large eyes?",
+      "correctAnswer": "Eurasian Eagle-Owl",
+      "wrongAnswers": ["Barn Owl", "Snowy Owl", "Burrowing Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl is often seen in urban areas?",
+      "correctAnswer": "Barn Owl",
+      "wrongAnswers": ["Great Horned Owl", "Eastern Screech Owl", "Snowy Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following adaptations allow ome owls to hunt at night?",
+      "correctAnswer": "Excellent night vision",
+      "wrongAnswers": ["Camouflage", "Speed", "Strong beaks"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl species is known for its distinctive barred feathers?",
+      "correctAnswer": "Barred Owl",
+      "wrongAnswers": ["Barn Owl", "Great Horned Owl", "Screech Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "What type of sound do Eastern Screech Owls make?",
+      "correctAnswer": "Trilling or whinnying",
+      "wrongAnswers": ["Hooting", "Screeching", "Chirping"],
+      "timeout": 15
+    },
+    {
+      "question": "What is the primary threat to owl survival?",
+      "correctAnswer": "Habitat destruction",
+      "wrongAnswers": ["Hunting", "Climate change", "Diseases"],
+      "timeout": 15
+    },
+    {
+      "question": "Which owl is known for its distinctive dark eyes?",
+      "correctAnswer": "Spotted Owl",
+      "wrongAnswers": ["Barn Owl", "Great Horned Owl", "Snowy Owl"],
+      "timeout": 15
+    },
+    {
+      "question": "How do owls communicate?",
+      "correctAnswer": "Vocalizations and body language",
+      "wrongAnswers": ["Only through sounds", "Only through movements", "By changing colors"],
+      "timeout": 15
+    },
+    {
+      "question": "Which of the following is NOT a type of owl?",
+      "correctAnswer": "Garden Owl",
+      "wrongAnswers": ["Greater Sooty Owl", "Red Owl", "Laughing Owl"],
+      "timeout": 15
+    }
+  ]
+}
