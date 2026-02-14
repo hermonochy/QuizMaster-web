@@ -68,6 +68,15 @@
                 </div>
             </div>
 
+            <div class="timer-section">
+                <div class="timer-display">
+                    <span id="timerValue">0</span>s
+                </div>
+                <div class="timer-bar">
+                    <div class="timer-fill" id="timerFill"></div>
+                </div>
+            </div>
+
             <div id="questionTextField"></div>
 
             <ul class="allAnswersList" id="answersList"></ul>
@@ -164,6 +173,9 @@
         let answered = false;
         let userAnswers = [];
         let currentQuizTitle = '';
+        let timerInterval = null;
+        let timeRemaining = 0;
+        let questionTimeout = 0;
 
         const startBtn = document.getElementById('startQuizBtn');
         const searchBtn = document.getElementById('searchBtn');
@@ -185,6 +197,8 @@
         const progressFill = document.getElementById('progressFill');
         const errorMessage = document.getElementById('errorMessage');
         const searchResults = document.getElementById('searchResults');
+        const timerValue = document.getElementById('timerValue');
+        const timerFill = document.getElementById('timerFill');
 
         async function getQuizData() {
             try {
@@ -377,6 +391,79 @@
             }
         }
 
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            
+            const question = quizData_global[currentQuestionIndex];
+            questionTimeout = question.timeout || 30;
+            timeRemaining = questionTimeout;
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    autoSubmitAnswer();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            timerValue.textContent = timeRemaining;
+            const percentage = (timeRemaining / questionTimeout) * 100;
+            timerFill.style.width = percentage + '%';
+
+            if (timeRemaining <= 5) {
+                timerFill.style.background = '#ff1111';
+            } else if (timeRemaining <= 10) {
+                timerFill.style.background = '#ff9800';
+            } else {
+                timerFill.style.background = '#667eea';
+            }
+        }
+
+        function stopTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        function autoSubmitAnswer() {
+            if (!answered) {
+                answered = true;
+                const question = quizData_global[currentQuestionIndex];
+                
+                userAnswers.push({
+                    question: question['question'],
+                    correctAnswer: question['correctAnswer'],
+                    userAnswer: 'No answer (Time out)',
+                    isCorrect: false
+                });
+
+                document.querySelectorAll('.answer-button').forEach(btn => {
+                    btn.disabled = true;
+                    if (btn.dataset.answer === question['correctAnswer']) {
+                        btn.classList.add('correct');
+                    }
+                });
+
+                setTimeout(() => {
+                    currentQuestionIndex++;
+
+                    if (currentQuestionIndex < quizData_global.length) {
+                        displayQuestion();
+                        ensureMusicPlaying();
+                    } else {
+                        showQuickResults();
+                        ensureMusicPlaying();
+                    }
+                }, 2000);
+            }
+        }
+
         async function startQuiz() {
             try {
                 hideError();
@@ -448,11 +535,14 @@
 
             selectedAnswer = null;
             answered = false;
+
+            startTimer();
         }
 
         function selectAnswer(answer, buttonElement) {
             if (answered) return;
 
+            stopTimer();
             answered = true;
             const question = quizData_global[currentQuestionIndex];
             const correctAnswer = question['correctAnswer'];
@@ -493,6 +583,7 @@
         }
 
         function showQuickResults() {
+            stopTimer();
             const percentage = Math.round((score / quizData_global.length) * 100);
             document.getElementById('quickFinalScore').textContent = `${score}/${quizData_global.length}`;
             document.getElementById('quickScorePercentage').textContent = `${percentage}%`;
@@ -606,6 +697,7 @@
         viewResultsBtn.addEventListener('click', showResults);
         restartBtn.addEventListener('click', startQuiz);
         homeBtn.addEventListener('click', () => {
+            stopTimer();
             showSection('home');
             hideError();
             searchResults.style.display = 'none';

@@ -43,7 +43,7 @@ async def get_quiz() -> Dict:
 
 
 def search_str_in_file(file_path: str, word: str) -> bool:
-    """Search for a word in a file using fuzzy matching"""
+    """Search engine"""
     try:
         with open(file_path, 'r', errors="ignore") as file:
             content = file.read().lower()
@@ -74,7 +74,7 @@ async def load_quiz_file(file_path: str) -> Dict:
 
 @app.get("/searchQuiz", response_model=Dict)
 async def search_quiz(query: str) -> Dict:
-    """Search for quizzes based on a search term"""
+    """Search for quizzes"""
     if not query or len(query.strip()) == 0:
         return {"success": False, "message": "Search query cannot be empty", "results": []}
     
@@ -88,7 +88,6 @@ async def search_quiz(query: str) -> Dict:
     if not matching_files:
         return {"success": False, "message": "No quizzes found matching your search", "results": []}
     
-    # Load all matching quizzes
     results = []
     for file_path in matching_files:
         quiz_data = await load_quiz_file(file_path)
